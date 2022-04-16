@@ -24,9 +24,16 @@ section{
     border-radius: 25%;
     border: 8px solid #F2C335;
 }
+p{
+    text-align: center;
+    color: white;
+    font-size: 23px;
+
+}
 
 .linhaH {
     width: 400px;
+    margin-top: 20px;
     
 }
 .duasD{
