@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+body {
+    
+    background-color: black;
+}
+#Cartão {
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    background-image: url(Imagens/backgorund.png);
+    background-size: 400px 200px;
+
+
+}
+h1 {
+    font-family: 'Zen Kurenaido', sans-serif;
+    color: black;
+    margin: 0px;
+    border: 0px;
+    padding-top: 15px;
+    padding-left: 25px;
+
+
+}
+ul {
+    font-family: 'Zen Kurenaido', sans-serif;
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 25px;
+    
+
+ }
+a {
+    text-decoration: none;
+    color: black;
+}
+ .instaimg{
+     list-style-image: url(Imagens/Insta.png);
+ }
+ .twtimg{
+    list-style-image: url(Imagens/Twitter.png);
+ }
+ .ytimg{
+     list-style-image: url(Imagens/Youtube.png);
+ }

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Fira+Code:wght@500&family=Monoton&family=Russo+One&family=Staatliches&family=Ubuntu:wght@700&display=swap');
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #3E3E40;
+    color: white;
+    font-size: 40px;
+    font-family: 'Staatliches', cursive;
+}
+
+section{
+    display: flex;
+    height: 1000px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3E3E40;
+
+}
+
+
+.foto{
+    height: 20rem;
+    border-radius: 25%;
+    border: 8px solid #F2C335;
+}
+
+.linhaH {
+    width: 400px;
+    
+}
+.duasD{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: #3E3E40;
+    justify-content: center;
+}
+
+a{  
+    display: flex;
+    height: 90px;
+    width: 300px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2C335;
+    font-size: 40px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+}

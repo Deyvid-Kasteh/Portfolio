@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="fundo">
+
+
+        <div class="tela">
+
+            <div class="numTela"><p id="primLinTela">Histórico</p></div>
+
+            <div class="numTela"><p id="segLinTela"></p></div>
+
+            <div class="numTela"><p id="operadoresTela"></p></div>
+
+            <div class="numTela"><p id="tercLinTela"></p></div>
+
+        </div>
+
+        <div class="teclas">
+            
+            <div class="primeiraLinha">
+                <div id="7" class="num" onclick="dig('7')"><h3>7</h3></div>
+
+
+                <div id="8" class="num" onclick="dig('8')"><h3>8</h3></div>
+    
+    
+                <div id="9" class="num" onclick="dig('9')"><h3>9</h3></div>
+    
+    
+                <div id="divisao" class="simbo" onclick="dig('÷')"><h3>÷</h3></div>
+            </div>
+
+
+            <div class="segundaLinha">
+                <div id="4" class="num" onclick="dig('4')"><h3>4</h3></div>
+
+
+                <div id="5" class="num" onclick="dig('5')"><h3>5</h3></div>
+    
+    
+                <div id="6" class="num" onclick="dig('6')"><h3>6</h3></div>
+    
+    
+                <div id="multiplicacao" class="simbo" onclick="dig('x')"><h3>x</h3></div>
+    
+            </div>
+
+
+            <div class="terceiraLinha">
+                <div id="1" class="num" onclick="dig('1')"><h3>1</h3></div>
+
+
+                <div id="2" class="num" onclick="dig('2')"><h3>2</h3></div>
+    
+    
+                <div id="3" class="num" onclick="dig('3')"><h3>3</h3></div>
+    
+    
+                <div id="subtracao" class="simbo" onclick="dig('-')"><h3>-</h3></div>
+            </div>
+
+
+            <div class="quartaLinha">
+
+                <div id="clear" class="simbo" onclick="myFunctionC()" ><h3>C</h3></div>
+
+
+                <div id="0" class="num" onclick="dig('0')"><h3>0</h3></div>
+    
+    
+                <div id="igual" class="simbo" onclick="calculo()"><h3>=</h3></div>
+    
+    
+                <div id="soma" class="simbo" onclick="dig('+')"><h3>+</h3></div> 
+            </div>
+
+
+
+
+        </div>
+        
+        
+    </div>
+
+
+        
+
+    <script src="script.js"></script>
+
+
+
+
+</body>
+</html>
