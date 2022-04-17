@@ -5,8 +5,13 @@ header {
     justify-content: center;
     background-color: #3E3E40;
     color: white;
-    font-size: 40px;
+    font-size: 80px;
     font-family: 'Staatliches';
+}
+
+h1
+{
+    text-align: center;
 }
 
 section{
