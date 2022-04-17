@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Fira+Code:wght@500&family=Monoton&family=Russo+One&family=Staatliches&family=Ubuntu:wght@700&display=swap');
 
+*
+{
+    font-family: 'Staatliches';
+    margin: 0;
+    padding: 0;
+}
+
 header {
     display: flex;
     justify-content: center;
     background-color: #3E3E40;
     color: white;
     font-size: 80px;
-    font-family: 'Staatliches';
 }
 
 h1

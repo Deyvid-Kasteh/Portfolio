@@ -104,7 +104,7 @@ body
 .indicator
 {
     position: absolute;
-    top: 30px;
+    top: 33px;
     width: 70px;
     height: 70px;
     background: #267365;
@@ -213,4 +213,17 @@ width: 20%;
     background: #F23030;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+@media (max-width: 600px) 
+{
+    .navigation
+    {
+    width: 94%;
+    }
+
+    .foot
+    {
+    width: 94%;
+    }
 }
