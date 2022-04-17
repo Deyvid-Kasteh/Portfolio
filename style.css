@@ -12,12 +12,13 @@ header {
     justify-content: center;
     background-color: #3E3E40;
     color: white;
-    font-size: 80px;
+    font-size: 60px;
 }
 
 h1
 {
     text-align: center;
+    width: 80%;
 }
 
 section{

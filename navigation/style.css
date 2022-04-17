@@ -181,31 +181,41 @@ body
 
 .cores
 {
-height: 60px;
-width: 20%;
+    height: 60px;
+    width: 20%;
+    position: relative;
+    display: block;
+    line-height: 70px;
+    font-size: 3em;
+    text-align: center;
 }
 
 .c1
 {
+    
     background: #267365;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-
+    color: #F2CB05;
+    
 }
 
 .c2
 {
     background: #F2CB05;
+    color: #F23030;
 }
 
 .c3
 {
     background: #F29F05;
+    color: #267365;
 }
 
 .c4
 {
     background: #F28705;
+    color: #F2CB05;
 }
 
 .c5
@@ -213,6 +223,7 @@ width: 20%;
     background: #F23030;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    color: #F2CB05;
 }
 
 @media (max-width: 600px) 
