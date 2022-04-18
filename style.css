@@ -51,7 +51,7 @@ p{
 .duasD{
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 60px;
     background-color: #3E3E40;
     justify-content: center;
 }
@@ -61,12 +61,14 @@ a{
     height: 90px;
     width: 300px;
     border-radius: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     justify-content: center;
     align-items: center;
-    background-color: #F2C335;
+    background-color: #3E3E40;
     font-size: 40px;
     font-weight: bolder;
     text-decoration: none;
     color: white;
+    box-shadow:     inset -6px -6px 20px rgba(0, 0, 0, 0.1),               inset 6px 6px 20px rgba(0,0,0,0.05);
+
 }
