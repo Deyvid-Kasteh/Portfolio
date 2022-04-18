@@ -25,7 +25,6 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 205px;
     background: var(--clr);
 }
 
@@ -38,6 +37,7 @@ body
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    margin-top: 68px;
 }
 
 .navigation ul
@@ -165,18 +165,47 @@ body
 }
 
 
+.container
+{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    background: #F2CB05;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    margin-top: 68px;
+    margin-bottom: 68px;
+    
+}
+
+.corpo
+{
+    background: #F2CB05;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3),
+                 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
 .foot
 {
     width: 80%;
     height: 70px;
     background: white;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     margin-top: 5px;
     padding: 5px;
-    position: fixed;
     bottom: 10px;
 }
 
@@ -234,6 +263,9 @@ body
     {
     width: 94%;
     }
+
+    
+
 
     .foot
     {
