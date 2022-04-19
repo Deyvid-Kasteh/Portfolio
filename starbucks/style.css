@@ -143,7 +143,7 @@ header ul li a
 
 .thumb li img
 {
-    max-width: 10px;
+    max-width: 80px;
 }
 
 .sci
@@ -182,7 +182,7 @@ header ul li a
     background: #017143;
     clip-path: circle(600px at right 800px);
 }
-/*---------------------------------------------------------------------------------------------------*/
+
 @media (max-width: 1318px)
 {
     section
@@ -400,97 +400,119 @@ header ul li a
     section
     {
         background: white;
-        padding: 10px 50px;
+        padding: 10px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
 
     }
 
-    header{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px 100px;
+    header
+    {
+        position: relative;
+        width: 375px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+        margin: 0;
+        padding: 10px;
     }
 
     header .logo
     {
-    position: relative;
-    max-width: 40px;
+        position: relative;
+        max-width: 40px;
+    }
+
+    header ul li a
+    {
+        display: inline-block;
+        color: #333;
+        font-weight: 400;
+        margin-left: 10px;
+        text-decoration: none;
     }
 
     .content
     {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
     }
 
     .content .textBox
     {
-    height: 300px;
-    margin-top: 100px;
-    position: relative;
-    max-width: 300px;
-    align-items: flex-start;
+        height: 100%;
+        position: relative;
+        max-width: 300px;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
 
     }
 
     .content .textBox h2
     {
-    position: relative;
-    color: #333;
-    font-size: 3em;
-    line-height: 1.2em;
-    font-weight: 500;
-    width: 450px;
-    max-width: 300px;
+        position: relative;
+        color: #333;
+        font-size: 2em;
+        line-height: 1.2em;
+        font-weight: 600;
+        width: 300px;
+        max-width: 300px;
     }
 
 
 
     .content .textBox p
     {
-    position: relative;
-    color: #333;
-    display: flex;
-    max-width: 400px;
-    text-align: left;
+        position: relative;
+        color: #333;
+        display: flex;
+        max-width: 300px;
+        text-align: left;
+    }
+
+    .content .textBox a
+    {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 20px;
+    background: #017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.7em;
+
     }
 
     .content .imgBox
     {
         margin: 0;
+        margin-top: 30px;
+        margin-left: 50px;
+        padding: 0;
         display: flex;
-        justify-content: right;
-
+        justify-content: flex-end;
+        width: 250px
     }
 
     .content .imgBox img
     {
-        max-width: 300px;
+        max-width: 250px;
+        justify-content: right;
     }
 
-
-    .circle
-    {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #017143;
-    clip-path: circle(300px at right 700px);
-    }
     .thumb
     {
     position: absolute;
-    left: 30%;
+    left: 50%;
     bottom: 20px;
     transform: translateX(-50%);
     display: flex;
@@ -509,14 +531,174 @@ header ul li a
     {
         max-width: 58px;
     }
+
+
+
+    .circle
+    {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(300px at right 700px);
+    }
+    
 }
 
+@media (max-width: 600px)
+{
+    section
+    {
+        background: white;
+        padding: 10px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+
+    }
+
+    header
+    {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+    }
+
+    header .logo
+    {
+        position: relative;
+        max-width: 50px;
+        display: flex;
+    }
+
+    header ul li a
+    {
+        display: flex;
+        color: #333;
+        font-weight: 500;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+
+    .content
+    {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content .textBox
+    {
+        height: 100%;
+        position: relative;
+        max-width: 300px;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .content .textBox h2
+    {
+        position: relative;
+        color: #333;
+        font-size: 2em;
+        line-height: 1.2em;
+        font-weight: 600;
+        width: 300px;
+        max-width: 300px;
+    }
 
 
 
+    .content .textBox p
+    {
+        position: relative;
+        color: #333;
+        display: flex;
+        max-width: 300px;
+        text-align: left;
+    }
 
-/*========================================================================================================================================================*/
+    .content .textBox a
+    {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 20px;
+    background: #017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.7em;
 
+    }
+
+    .content .imgBox
+    {
+        margin: 0;
+        margin-top: 30px;
+        margin-left: 50px;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 250px
+    }
+
+    .content .imgBox img
+    {
+        max-width: 250px;
+        justify-content: right;
+    }
+
+    .thumb
+    {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    }
+
+    .thumb li
+    {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    }
+
+    .thumb li img
+    {
+        max-width: 58px;
+    }
+
+
+
+    .circle
+    {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(300px at right 700px);
+    }
+    
+}
 
 
 
@@ -673,7 +855,7 @@ header ul li a
 }
 
 
-/*========================================================================================================================================================*/
+
 
 @media (max-width: 375px)
 {
