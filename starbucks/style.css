@@ -319,6 +319,12 @@ header ul li a
 
 }
 
+
+
+
+
+
+
 @media (max-width: 878px)
 {
     section
@@ -338,7 +344,7 @@ header ul li a
     .content .textBox
     {
     position: relative;
-    max-width: 600px;
+    max-width: 300px;
     align-items: flex-start;
     }
 
@@ -364,18 +370,22 @@ header ul li a
     text-align: left;
 }
 
-
-
-    .circle
+.content .imgBox
 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #017143;
-    clip-path: circle(400px at right 500px);
+    width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
 }
+
+.content .imgBox img
+{
+    max-width: 350px;
+}
+
+
+    
 .thumb
 {
     position: absolute;
@@ -393,6 +403,16 @@ header ul li a
     cursor: pointer;
     transition: 0.5s;
 }
+.circle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(400px at right 500px);
+}
 }
 
 @media (max-width: 768px)
@@ -400,7 +420,7 @@ header ul li a
     section
     {
         background: white;
-        padding: 10px 24px;
+        padding: 10px 30px;
         display: flex;
         flex-direction: column;
         justify-content: left;
@@ -411,9 +431,9 @@ header ul li a
     header
     {
         position: relative;
-        width: 375px;
+        width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         margin: 0;
         padding: 10px;
@@ -422,18 +442,21 @@ header ul li a
     header .logo
     {
         position: relative;
-        max-width: 40px;
+        max-width: 45px;
+        display: flex;
     }
 
     header ul li a
     {
-        display: inline-block;
+        display: flex;
         color: #333;
-        font-weight: 400;
+        font-weight: 500;
         margin-left: 10px;
         text-decoration: none;
     }
 
+
+    
     .content
     {
         position: relative;
@@ -441,18 +464,13 @@ header ul li a
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 0;
-        padding: 0;
+        align-items: center;
     }
 
     .content .textBox
     {
-        height: 100%;
         position: relative;
-        max-width: 300px;
-        align-items: flex-start;
-        margin: 0;
-        padding: 0;
+        max-width: 600px;
 
     }
 
@@ -460,35 +478,37 @@ header ul li a
     {
         position: relative;
         color: #333;
-        font-size: 2em;
+        font-size: 2.5em;
         line-height: 1.2em;
         font-weight: 600;
-        width: 300px;
-        max-width: 300px;
+        width: 500px;
+        max-width: 500px;
+        margin: auto;
     }
 
-
+    .content .textBox h2 span
+    {
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+    }
 
     .content .textBox p
     {
-        position: relative;
         color: #333;
-        display: flex;
-        max-width: 300px;
-        text-align: left;
     }
 
     .content .textBox a
     {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 20px;
     padding: 8px 20px;
     background: #017143;
     color: #fff;
     border-radius: 40px;
     font-weight: 500;
+    letter-spacing: 1px;
     text-decoration: none;
-    font-size: 0.7em;
 
     }
 
@@ -500,14 +520,15 @@ header ul li a
         padding: 0;
         display: flex;
         justify-content: flex-end;
-        width: 250px
+        width: 300px
     }
 
     .content .imgBox img
     {
-        max-width: 250px;
+        max-width: 280px;
         justify-content: right;
     }
+
 
     .thumb
     {
@@ -552,7 +573,7 @@ header ul li a
     section
     {
         background: white;
-        padding: 10px 24px;
+        padding: 10px 26px;
         display: flex;
         flex-direction: column;
         justify-content: left;
@@ -589,60 +610,57 @@ header ul li a
 
     .content
     {
-        position: relative;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     }
 
     .content .textBox
     {
-        height: 100%;
-        position: relative;
-        max-width: 300px;
-        align-items: flex-start;
-        margin: 0;
-        padding: 0;
-
+    position: relative;
+    max-width: 600px;
     }
 
     .content .textBox h2
     {
         position: relative;
         color: #333;
-        font-size: 2em;
+        font-size: 2.5em;
         line-height: 1.2em;
         font-weight: 600;
-        width: 300px;
-        max-width: 300px;
+        width: 400px;
+        max-width: 400px;
+        margin: auto;
     }
 
 
+    .content .textBox h2 span
+    {
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+    }
 
     .content .textBox p
     {
-        position: relative;
-        color: #333;
-        display: flex;
-        max-width: 300px;
-        text-align: left;
+    color: #333;
     }
 
     .content .textBox a
     {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: 20px;
     padding: 8px 20px;
     background: #017143;
     color: #fff;
     border-radius: 40px;
     font-weight: 500;
-    text-decoration: none;
+    letter-spacing: 1px;
     font-size: 0.7em;
-
+    text-decoration: none;
     }
 
     .content .imgBox
@@ -653,12 +671,12 @@ header ul li a
         padding: 0;
         display: flex;
         justify-content: flex-end;
-        width: 250px
+        width: 300px
     }
 
     .content .imgBox img
     {
-        max-width: 250px;
+        max-width: 280px;
         justify-content: right;
     }
 
