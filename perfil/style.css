@@ -417,6 +417,17 @@ body
     font-weight: 500;
 }
 
+.corpo .avisos .box .boxLink .boxLinkTitulo .pCorpoCurriculo
+{
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
 
 
 
