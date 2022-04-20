@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Akshar&family=Inter&family=Oswald&family=Roboto+Condensed&family=Roboto+Slab&family=Russo+One&family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 
 
@@ -23,6 +24,7 @@ body
 {
     font-family: 'Staatliches';
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -168,11 +170,12 @@ body
 
 .container
 {
+    display: flex;
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
     width: 80%;
-    height: auto;
-    background: #F2CB05;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,91 +187,230 @@ body
 .sec
 {
     display: flex;
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-around;
+    height: 100%;
+    justify-content: space-between;
 
 }
+
+
+
 
 .corpo
 {
     display: flex;
     position: relative;
-    background: #F2CB05;
-    display: flex;
-    width: 40%;
-    height: 200px;
-    margin: 30px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3),
-                 5px 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-a
-{
-    display: flex;
-    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
-    text-decoration: none;
-    color: black;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3),
+                5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.link
+.corpo .quadro
 {
     display: flex;
     position: relative;
     flex-direction: column;
+    background: #1c5349;
+    width: 40%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    align-items: center;
+
+
+}
+
+.corpo .quadro .sec1
+
+{   display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+
+.corpo .quadro .titulo
+{
+    position: relative;
+    display: block;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: clamp(1em, 0.8em + 2.5vw, 4vw);
+    white-space: nowrap;
+}
+
+.corpo .quadro .foto{
+    height: 15vw;
+    border-radius: 25%;
+}
+
+
+.corpo .avisos
+{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    width: auto;
+    
+}
+.corpo .avisos .box
+{
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    background: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5em;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+
+/*-----------------
+.box.shadow2:before
+{
+    content: '';
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    width: 90%;
+    height: 50px;
+    background: black;
+    transform-origin: left;
+    transform: skewY(5deg);
+    z-index: -1;
+    filter: blur(5px);
+} 
+
+
+-----------*/
+
+
+
+
+.box.shadow1
+{
+    box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
+} 
+
+.corpo .avisos .box.shadow2:before
+{
+content: '';
+position: absolute;
+bottom: 10px;
+left: 10%;
+width: 90%;
+height: 50px;
+background: rgba(0, 0, 0, 0.3);
+transform-origin: left;
+transform: skewY(5deg);
+z-index: -1;
+filter: blur(5px);
+} 
+
+.box.shadow3:before
+{
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 50%;
+height: 30px;
+background: rgba(0, 0, 0, 0.3);
+transform-origin: right;
+transform: skewY(-8deg);
+z-index: -1;
+filter: blur(10px);
+} 
+
+.box.shadow3:after
+{
+content: '';
+position: absolute;
+bottom: 0;
+right: 0;
+width: 50%;
+height: 30px;
+background: rgba(0, 0, 0, 0.3);
+transform-origin: left;
+transform: skewY(8deg);
+z-index: -1;
+filter: blur(10px);
+} 
+
+.box.shadow4:before
+{
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 5%;
+    width: 90%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.box.shadow5:before
+{
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    left: 5%;
     width: 90%;
     height: 90%;
-    border-radius: 30px;
-    max-width: 90%;
-    justify-content: flex-start;
-    align-items: center;
-    background: #F2CB05;
-
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    filter: blur(10px);
 }
 
-.titulo
+.box.shadow6
 {
-    display: flex;
-    position: relative;
-    width: 90%;
-    height: 30%;
-    max-width: 90%;
-    justify-content: space-around;
-    align-items: center;
-    background: #F2CB05;
+    background: #2ec194;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.1);
 }
 
-.titulo p
+.box.shadow7
 {
-    font-size: 2.5em;
+    background: #2ec194;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+                 15px 15px 15px rgba(0, 0, 0, 0.1),
+          inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+          inset  5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-.corpoMsg
-{
-    display: flex;
-    position: relative;
-    width: 90%;
-    height: fit-content;
-    max-width: 90%;
-    background: #F2CB05;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-}
 
-.corpoMsg p 
 
-{
-    text-align: left;
-}
+
+
+
+
+
+
+
+
+
 
 
 .foot
@@ -332,6 +474,12 @@ a
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     color: #F2CB05;
+}
+.c5 a 
+{
+    text-decoration: none;
+    color: #F2CB05;
+    width: 100%;
 }
 
 @media (max-width: 600px) 

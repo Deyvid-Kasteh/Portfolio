@@ -172,6 +172,12 @@ header ul li a
     filter: invert(0.6);
 }
 
+.sci li a ion-icon
+{
+    width: 50px;
+    height: 50px;
+}
+
 .circle
 {
     position: absolute;
