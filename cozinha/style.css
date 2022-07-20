@@ -5,7 +5,6 @@
     font-family: 'Staatliches';
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body
@@ -31,14 +30,13 @@ header
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1100px;
 }
 
 
 
 .container
 {
-    width: 800px;
+    width: auto;
     margin: 20px;
     padding: 40px 30px;
     background: #D96941;
