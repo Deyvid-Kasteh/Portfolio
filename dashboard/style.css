@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Fira+Code:wght@500&family=Monoton&family=Russo+One&family=Staatliches&family=Ubuntu:wght@700&display=swap');
+
+*
+{
+    font-family: 'Staatliches';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container1 {
+    display: flex;
+    width: 400px;
+    height: 800px;
+    border-radius: 20px;
+    background-color: yellow;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 100px;
+    
+    
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 230px;
+    border-radius: 15px;
+    background-color: yellow;
+    
+}
+
+.container21 {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    background-color: yellow;
+
+}
+
+.tituloApp {
+    font-size: 46px;
+    font-weight: bolder;
+    color: #F23030;
+}
+
+
+
+.container22 {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.container221 {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.664);
+    width: 150px;
+    height: 120px;
+    justify-content: flex-end;
+    border-radius: 35px;
+    box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.iconPrin {
+    display: flex;
+    align-items: center;
+}
+.secSpace{
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    color: #F29F05;
+}
+
+
+.container3 {
+    display: flex;
+    width: 95%;
+    height: 550px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.89);
+    margin: auto;
+}
