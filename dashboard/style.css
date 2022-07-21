@@ -18,7 +18,7 @@ body {
     width: 400px;
     height: 800px;
     border-radius: 20px;
-    background-color: yellow;
+    background-color: #F2C030;
     flex-direction: column;
     justify-content: space-between;
     margin: auto;
@@ -33,8 +33,9 @@ body {
     justify-content: space-between;
     width: 100%;
     height: 230px;
-    border-radius: 15px;
-    background-color: yellow;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #F2A71B;
     
 }
 
@@ -43,14 +44,16 @@ body {
     width: 95%;
     margin: auto;
     justify-content: space-between;
-    background-color: yellow;
+    background-color: #F2A71B;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 
 }
 
 .tituloApp {
     font-size: 46px;
     font-weight: bolder;
-    color: #F23030;
+    color: #A62B1F;
 }
 
 
@@ -89,6 +92,6 @@ body {
     width: 95%;
     height: 550px;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.89);
-    margin: auto;
+    background-color: rgba(255, 255, 255, 0.664);
+        margin: auto;
 }
