@@ -97,24 +97,171 @@ body {
 
 .container31 {
     display: flex;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.664);
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.container311{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.container3111{
+    display: flex;
+    height: 100px;
+    font-size: 40px;
+    color: #F2C030;
+    align-items: center;
+}
+
+.container312 {
+    display: none;
+    justify-content: space-around;
+    
+}
+
+.bttnIlumi {
+    display: flex;
+    width: 130px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #F29F05;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.35);
+    
 }
 
 .container32 {
     display: flex;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.664);
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.15);
 }
 
+.container321{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container3211{
+    display: flex;
+    height: 100px;
+    font-size: 40px;
+    color: #F2C030;
+    align-items: center;
+}
+.container322{
+    display: none;
+    justify-content: space-around;
+}
+.bttnFog {
+    display: flex;
+    width: 130px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #F29F05;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+
+
 .container33 {
     display: flex;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.664);
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.15);
 }
+
+.container331{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container3311{
+    display: flex;
+    height: 100px;
+    font-size: 40px;
+    color: #F2C030;
+    align-items: center;
+}
+
+.container332 {
+    display: none;
+    flex-direction: column;
+}
+
+
+.container3321 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bttnExaust{
+    display: flex;
+    width: 200px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #F29F05;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.35);
+}
+
+.container3322 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bttnTemForn{
+    display: flex;
+    width: 160px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #F29F05;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    
+}
+
+.bttnLigAuto{
+    display: flex;
+    width: 110px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #F29F05;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    
+}
+
+
