@@ -1,38 +1,56 @@
-var btn1 = document.querySelector('#bttn1');
-var container312 = document.querySelector('.container312');
+function abrir(a) {
+    var oper = a
 
-var btn2 = document.querySelector('#bttn2');
-var container322 = document.querySelector('.container322');
-
-var btn3 = document.querySelector('#bttn3');
-var container332 = document.querySelector('.container332');
-
-
-
-
-
+    
+    var container312 = document.querySelector('.container312');
+    var container322 = document.querySelector('.container322');
+    var container332 = document.querySelector('.container332');
+    var luzTeto = document.querySelector('#bttnTeto');
+    var luzPia = document.querySelector('#bttnPia');
+    var energiaForFog = document.querySelector('#bttnFog');
+    var energiaExaust =document.querySelector('#bttnExaust');
 
 
-btn1.addEventListener('click', function() {
-    if (container312.style.display === 'none') {
-        container312.style.display = 'flex';
-    } else {
-        container312.style.display = 'none'
+    switch (oper) {
+        case 'ilum':
+            container312.style.display = 'flex';
+            container322.style.display = 'none';
+            container332.style.display = 'none';
+        break;
+        case 'forn':
+            container312.style.display = 'none';
+            container322.style.display = 'flex';
+            container332.style.display = 'none';
+        break;
+        case 'exaus':
+            container312.style.display = 'none';
+            container322.style.display = 'none';
+            container332.style.display = 'flex';
+        break;
+
+        case 'teto':
+            luzTeto.classList.toggle('activeTeto');
+            console.log('deu certo');
+        break;
+
+        case 'pia':
+            luzPia.classList.toggle('activePia');
+            console.log('deu certo');
+        break;
+
+        case 'enerForFog':
+            energiaForFog.classList.toggle('activeForFog');
+            console.log('deu certo');
+        break;
+
+        case 'ligExaust':
+            energiaExaust.classList.toggle('activeExaust');
+            console.log('deu certo');
+        break;
+
+
+
+
     }
-});
 
-btn2.addEventListener('click', function() {
-    if (container322.style.display === 'none') {
-        container322.style.display = 'flex';
-    } else {
-        container322.style.display = 'none'
-    }
-});
-
-btn3.addEventListener('click', function() {
-    if (container332.style.display === 'none') {
-        container332.style.display = 'flex';
-    } else {
-        container332.style.display = 'none'
-    }
-});
+}

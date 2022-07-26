@@ -61,7 +61,7 @@
         <div class="container3">
 
             <div class="container31">
-                <div id="bttn1" class="container311">
+                <div id="bttn1" class="container311" onclick="abrir('ilum')">
                     <svg style="width:100px;height:100px" viewBox="0 0 24 24">
                         <path fill="#F2C030" d="M14.76 11L16.76 15H7.24L9.24 11H14.76M13 4H11V9H8L4 17H20L16 9H13V4M14 18H10C10 19.11 10.9 20 12 20S14 19.11 14 18Z" />
                     </svg>
@@ -71,12 +71,12 @@
                 </div>
                 
                 <div class="container312">
-                    <div class="bttnIlumi" class="bttnTeto">Teto</div>
-                    <div class="bttnIlumi" class="bttnPia">Pia</div>
+                    <div id="bttnTeto" class="bttnTeto" onclick="abrir('teto')">Teto</div>
+                    <div id="bttnPia" class="bttnPia"  onclick="abrir('pia')">Pia</div>
                 </div>
             </div>
             <div class="container32">
-                <div id="bttn2" class="container321">
+                <div id="bttn2" class="container321" onclick="abrir('forn')">
                     <svg style="width:90px;height:90px" viewBox="0 0 24 24">
                         <path fill="#F2C030" d="M6,14H8L11,17H9L6,14M4,4H5V3A1,1 0 0,1 6,2H10A1,1 0 0,1 11,3V4H13V3A1,1 0 0,1 14,2H18A1,1 0 0,1 19,3V4H20A2,2 0 0,1 22,6V19A2,2 0 0,1 20,21V22H17V21H7V22H4V21A2,2 0 0,1 2,19V6A2,2 0 0,1 4,4M18,7A1,1 0 0,1 19,8A1,1 0 0,1 18,9A1,1 0 0,1 17,8A1,1 0 0,1 18,7M14,7A1,1 0 0,1 15,8A1,1 0 0,1 14,9A1,1 0 0,1 13,8A1,1 0 0,1 14,7M20,6H4V10H20V6M4,19H20V12H4V19M6,7A1,1 0 0,1 7,8A1,1 0 0,1 6,9A1,1 0 0,1 5,8A1,1 0 0,1 6,7M13,14H15L18,17H16L13,14Z" />
                     </svg>
@@ -85,13 +85,13 @@
                     </div>
                 </div>
                 <div class="container322">
-                    <div class="bttnFog">Energia</div>
+                    <div id="bttnFog" class="bttnFog" onclick="abrir('enerForFog')">Energia</div>
                 </div>
                 
             </div>
             <div class="container33">
 
-                <div id="bttn3" class="container331">
+                <div id="bttn3" class="container331" onclick="abrir('exaus')">
                     <svg style="width:90px;height:90px" viewBox="0 0 24 24">
                         <path fill="#F2C030" d="M12,11A1,1 0 0,0 11,12A1,1 0 0,0 12,13A1,1 0 0,0 13,12A1,1 0 0,0 12,11M12.5,2C17,2 17.11,5.57 14.75,6.75C13.76,7.24 13.32,8.29 13.13,9.22C13.61,9.42 14.03,9.73 14.35,10.13C18.05,8.13 22.03,8.92 22.03,12.5C22.03,17 18.46,17.1 17.28,14.73C16.78,13.74 15.72,13.3 14.79,13.11C14.59,13.59 14.28,14 13.88,14.34C15.87,18.03 15.08,22 11.5,22C7,22 6.91,18.42 9.27,17.24C10.25,16.75 10.69,15.71 10.89,14.79C10.4,14.59 9.97,14.27 9.65,13.87C5.96,15.85 2,15.07 2,11.5C2,7 5.56,6.89 6.74,9.26C7.24,10.25 8.29,10.68 9.22,10.87C9.41,10.39 9.73,9.97 10.14,9.65C8.15,5.96 8.94,2 12.5,2Z" />
                     </svg>
@@ -102,7 +102,7 @@
                 
                 <div class="container332">
                     <div class="container3321">
-                        <div class="bttnExaust">Ligar Exaustor</div>
+                        <div id="bttnExaust"     class="bttnExaust" onclick="abrir('ligExaust')">Ligar Exaustor</div>
                     </div>
                     <div class="container3322">
                         <div class="bttnTemForn">Temp. forno 160º</div>
