@@ -50,10 +50,167 @@ body {
 
 }
 
-.tituloApp {
+
+
+
+
+
+#cozinha {
+    display: flex;
+    font-size: 41px;
+    font-weight: bolder;
+    background-color: #F2A71B;
+    color: #A62B1F;
+    align-items: center;
+}
+
+#nomeCozinha{
+    display: flex;
+    margin-right: 8px;
+}
+#nomeCozinha.activeCozinha{
+    display: none;
+}
+
+
+
+
+#quarto{
+    display: none;
+    font-size: 41px;
+    font-weight: bolder;
+    color: #A62B1F;
+    align-items: center;
+}
+
+#quarto.activeQuarto{
+    display: flex;
+}
+
+
+#nomeQuarto{
+    display: none;
+    margin-right: 8px;
+}
+
+
+
+#sala{
+    display: none;
     font-size: 46px;
     font-weight: bolder;
     color: #A62B1F;
+    align-items: center;
+}
+
+#sala.activeSala{
+    display: flex;
+}
+
+
+#nomeSala{
+    display: none;
+    margin-right: 8px;
+}
+
+
+
+
+
+#banheiro{
+    display: none;
+    font-size: 46px;
+    font-weight: bolder;
+    color: #A62B1F;
+    align-items: center;
+}
+
+#banheiro.activeBanheiro{
+    display: flex;
+}
+
+#nomeBanheiro{
+    display: flex;
+    margin-right: 8px;
+}
+
+
+
+
+#lavanderia{
+    display: none;
+    font-size: 46px;
+    font-weight: bolder;
+    color: #A62B1F;
+    align-items: center;
+}
+
+#lavanderia.activeLavanderia{
+    display: flex;
+}
+
+
+#nomeLavanderia{
+    display: flex;
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+#menuToggle {
+    display: flex;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+
+}
+
+#menuToggle.activeMenu{
+    background: #f73131;
+    border-radius: 25px;
+}
+
+
+
+#menuToggle::before{
+    content: '';
+    position: absolute;
+    width: 37px;
+    height: 4.5px;
+    background: white;
+    transition: 0.5s;
+    transform: translateY(-10px);
+    box-shadow: 0 10px white;
+}
+
+#menuToggle.activeMenu::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0px white;
+}
+
+
+#menuToggle::after{
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 4.5px;
+    background: white;
+    transition: 0.5s;
+    transform: translateY(10px);    
+}
+
+#menuToggle.activeMenu::after{
+    transform: translateY(0px) rotate(-45deg);  
 }
 
 

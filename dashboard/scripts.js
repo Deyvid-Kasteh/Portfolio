@@ -1,7 +1,14 @@
 function abrir(a) {
     var oper = a
 
-    
+    var menuToggle = document.querySelector('#menuToggle');
+    var nomeCozinha = document.querySelector('#nomeCozinha');
+    var quarto = document.querySelector('#quarto');
+    var sala = document.querySelector('#sala');
+    var banheiro = document.querySelector('#banheiro');
+    var lavanderia = document.querySelector('#lavanderia');
+
+
     var container312 = document.querySelector('.container312');
     var container322 = document.querySelector('.container322');
     var container332 = document.querySelector('.container332');
@@ -12,6 +19,19 @@ function abrir(a) {
 
 
     switch (oper) {
+        case 'menu':
+            menuToggle.classList.toggle('activeMenu');
+            nomeCozinha.classList.toggle('activeCozinha');
+            quarto.classList.toggle('activeQuarto');
+            sala.classList.toggle('activeSala');
+            banheiro.classList.toggle('activeBanheiro');
+            lavanderia.classList.toggle('activeLavanderia');
+
+
+
+            console.log('deu certo');            
+        break;
+
         case 'ilum':
             container312.style.display = 'flex';
             container322.style.display = 'none';
