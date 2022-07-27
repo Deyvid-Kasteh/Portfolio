@@ -53,6 +53,17 @@ body {
 
 
 
+#central{
+    display: flex;
+    justify-content: center;
+    width: 260px;
+}
+
+
+#central.activeCentral{
+    justify-content: flex-start;
+}
+
 
 
 #cozinha {
@@ -64,13 +75,70 @@ body {
     align-items: center;
 }
 
+#cozinha.activeCozinhaCentral{
+    display: flex;/*
+    font-size: 41px;
+    font-weight: bolder;
+    background-color: #F2A71B;
+    color: #A62B1F;
+    align-items: center;
+    animation: slidein 3s;*/
+}
+
 #nomeCozinha{
     display: flex;
     margin-right: 8px;
 }
+#nomeCozinha.animedCozinha{
+    display: flex;
+    overflow: hidden;
+    animation: fade-out-nomeCozinha 3s;
+    
+}
+
 #nomeCozinha.activeCozinha{
     display: none;
+
 }
+
+#svgCozinha{
+    display: flex;
+    margin-right: 12px;
+    
+}
+
+#svgCozinha.animedsvgCozinha{
+    animation: esquedaSVG 3s;
+}
+
+
+
+@keyframes esquedaSVG {
+    0% {
+        transform: translate(0px);
+      }
+    100% {
+        transform: translate(-113px);      
+      }
+
+}
+
+
+@keyframes fade-out-nomeCozinha {
+    0% {
+        opacity: 1;
+        width: 118.5px;
+        margin-right: 8px;
+      }
+    100% {
+        opacity: 0;
+        width:0px;
+        margin-right: 0;
+        
+      }
+
+}
+
 
 
 
@@ -85,6 +153,9 @@ body {
 
 #quarto.activeQuarto{
     display: flex;
+    margin-right: 12px;
+    animation: fade-in 0.5s;
+
 }
 
 
@@ -97,7 +168,7 @@ body {
 
 #sala{
     display: none;
-    font-size: 46px;
+    font-size: 41px;
     font-weight: bolder;
     color: #A62B1F;
     align-items: center;
@@ -105,6 +176,8 @@ body {
 
 #sala.activeSala{
     display: flex;
+    margin-right: 12px;
+    animation: fade-in 0.5s;
 }
 
 
@@ -119,7 +192,7 @@ body {
 
 #banheiro{
     display: none;
-    font-size: 46px;
+    font-size: 41px;
     font-weight: bolder;
     color: #A62B1F;
     align-items: center;
@@ -127,10 +200,12 @@ body {
 
 #banheiro.activeBanheiro{
     display: flex;
+    margin-right: 12px;
+    animation: fade-in 0.5s;
 }
 
 #nomeBanheiro{
-    display: flex;
+    display: none;
     margin-right: 8px;
 }
 
@@ -139,7 +214,7 @@ body {
 
 #lavanderia{
     display: none;
-    font-size: 46px;
+    font-size: 41px;
     font-weight: bolder;
     color: #A62B1F;
     align-items: center;
@@ -147,17 +222,26 @@ body {
 
 #lavanderia.activeLavanderia{
     display: flex;
+    margin-right: 12px;
+    animation: fade-in 0.5s;
 }
 
 
 #nomeLavanderia{
-    display: flex;
+    display: none;
     margin-right: 8px;
 }
 
 
 
-
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
 
 
