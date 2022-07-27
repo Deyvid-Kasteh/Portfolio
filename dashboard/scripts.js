@@ -60,10 +60,29 @@ function abrir(a) {
 
     switch (oper) {
         case 'menu':
-            menuToggle.classList.toggle('activeMenu');
-            cozinha.classList.toggle('activeCozinhaCentral');
-            nomeCozinha.classList.toggle('animedCozinha');
-            primeiroPasso();
+
+            if (menuToggle.classList.contains('activeMenu')) {
+                //  fechado //
+                menuToggle.classList.toggle('activeMenu');
+                lavanderia.classList.remove('activeLavanderia');
+                banheiro.classList.remove('activeBanheiro');
+                sala.classList.remove('activeSala');
+                quarto.classList.remove('activeQuarto');
+                nomeCozinha.classList.remove('activeCozinha');
+                central.classList.remove('activeCentral');
+
+
+
+
+
+              } else {
+                menuToggle.classList.toggle('activeMenu');
+                cozinha.classList.toggle('activeCozinhaCentral');
+                nomeCozinha.classList.toggle('animedCozinha');
+                primeiroPasso();
+              }
+
+                  
             //quarto.classList.toggle('activeQuarto');
             //sala.classList.toggle('activeSala');
             //banheiro.classList.toggle('activeBanheiro');
@@ -91,6 +110,7 @@ function abrir(a) {
         break;
 
         case 'teto':
+            luzTeto.classList.contains('activeTeto');
             luzTeto.classList.toggle('activeTeto');
             console.log('deu certo');
         break;

@@ -92,7 +92,7 @@ body {
 #nomeCozinha.animedCozinha{
     display: flex;
     overflow: hidden;
-    animation: fade-out-nomeCozinha 3s;
+    animation: fade-out-nomeCozinha 3s ease-in;
     
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 #svgCozinha.animedsvgCozinha{
-    animation: esquedaSVG 3s;
+    animation: esquedaSVG 3s ease-out;
 }
 
 
@@ -118,7 +118,7 @@ body {
         transform: translate(0px);
       }
     100% {
-        transform: translate(-113px);      
+        transform: translate(-107px);      
       }
 
 }
