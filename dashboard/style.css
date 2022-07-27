@@ -290,16 +290,48 @@ body {
 
 .bttnLigAuto{
     display: flex;
-    width: 110px;
+    width: 140px;
     height: 40px;
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: #F29F05;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-size: 18px;
     color: white;
-    
 }
 
+input[type="checkbox"] {
+    appearance: none;
+    background-color: white;
+    width: 45px;
+    height: 23px;
+    border-radius: 50px;
+    box-shadow: inset 0px 0px 3px 2px rgba(0, 0, 0, 0.342);
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
 
+}
+
+input:checked[type="checkbox"] {
+    background-color: #3DECB1;
+}
+
+input[type="checkbox"]:before {
+    position: absolute;
+    content: '';
+    width: 23px;
+    height: 23px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0px 1px 2px 0.5px rgba(0, 0, 0, 0.733);
+    transform: scale(1.06);
+    top: 0;
+    left: 0;
+    transition: 0.4s;
+}
+
+input:checked[type="checkbox"]:before {
+    left: 22px;
+}
