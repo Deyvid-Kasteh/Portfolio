@@ -64,11 +64,15 @@ function abrir(a) {
             if (menuToggle.classList.contains('activeMenu')) {
                 //  fechado //
                 menuToggle.classList.toggle('activeMenu');
+                nomeCozinha.classList.remove('activeCozinha');
+
+                nomeCozinha.classList.remove('animedCozinha');
+                svg.classList.remove('animedsvgCozinha');
+                svg.classList.remove('animedsvgCozinha');
                 lavanderia.classList.remove('activeLavanderia');
                 banheiro.classList.remove('activeBanheiro');
                 sala.classList.remove('activeSala');
                 quarto.classList.remove('activeQuarto');
-                nomeCozinha.classList.remove('activeCozinha');
                 central.classList.remove('activeCentral');
 
 
