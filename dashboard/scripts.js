@@ -38,21 +38,48 @@ function abrir(a) {
         })
     }
 
+    function esperameioS(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                console.log('esperando a animação acontecer');
+                resolve()
+            }, 500);
+        })
+    }
+
+    function esperameio02S(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                console.log('esperando a animação acontecer');
+                resolve()
+            }, 200);
+        })
+    }
+
+    function esperameio35S(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                console.log('esperando a animação acontecer');
+                resolve()
+            }, 350);
+        })
+    }
+
     async function primeiroPasso() {
-        await espera3s();
+        await esperameioS();
         nomeCozinha.classList.toggle('activeCozinha');
         nomeCozinha.classList.toggle('animedCozinha');
         svg.classList.toggle('animedsvgCozinha');
-        await espera3s();
+        await esperameioS();
         central.classList.toggle('activeCentral');
         svg.classList.toggle('animedsvgCozinha');
-        await espera1s();
+        await esperameio02S();
         quarto.classList.toggle('activeQuarto');
-        await espera1s();
+        await esperameio02S();
         sala.classList.toggle('activeSala');
-        await espera1s();
+        await esperameio02S();
         banheiro.classList.toggle('activeBanheiro');
-        await espera1s();
+        await esperameio02S();
         lavanderia.classList.toggle('activeLavanderia');
     }
 
@@ -65,7 +92,6 @@ function abrir(a) {
                 //  fechado //
                 menuToggle.classList.toggle('activeMenu');
                 nomeCozinha.classList.remove('activeCozinha');
-
                 nomeCozinha.classList.remove('animedCozinha');
                 svg.classList.remove('animedsvgCozinha');
                 svg.classList.remove('animedsvgCozinha');
@@ -76,21 +102,12 @@ function abrir(a) {
                 central.classList.remove('activeCentral');
 
 
-
-
-
               } else {
                 menuToggle.classList.toggle('activeMenu');
                 cozinha.classList.toggle('activeCozinhaCentral');
                 nomeCozinha.classList.toggle('animedCozinha');
                 primeiroPasso();
               }
-
-                  
-            //quarto.classList.toggle('activeQuarto');
-            //sala.classList.toggle('activeSala');
-            //banheiro.classList.toggle('activeBanheiro');
-            //lavanderia.classList.toggle('activeLavanderia');
 
 
 

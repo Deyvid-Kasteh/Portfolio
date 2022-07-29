@@ -76,13 +76,8 @@ body {
 }
 
 #cozinha.activeCozinhaCentral{
-    display: flex;/*
-    font-size: 41px;
-    font-weight: bolder;
-    background-color: #F2A71B;
-    color: #A62B1F;
-    align-items: center;
-    animation: slidein 3s;*/
+    display: flex;
+    
 }
 
 #nomeCozinha{
@@ -92,8 +87,20 @@ body {
 #nomeCozinha.animedCozinha{
     display: flex;
     overflow: hidden;
-    animation: fade-out-nomeCozinha 3s ease-in;
-    
+    animation: fade-out-nomeCozinha 0.5s ease-in;
+}
+
+@keyframes fade-out-nomeCozinha {
+    0% {
+        opacity: 1;
+        width: 118.5px;
+        margin-right: 8px;
+      }
+    100% {
+        opacity: 0;
+        width:0px;
+        margin-right: 0; 
+      }
 }
 
 #nomeCozinha.activeCozinha{
@@ -108,7 +115,7 @@ body {
 }
 
 #svgCozinha.animedsvgCozinha{
-    animation: esquedaSVG 3s ease-out;
+    animation: esquedaSVG 0.5s ease-out;
 }
 
 
@@ -124,25 +131,6 @@ body {
 }
 
 
-@keyframes fade-out-nomeCozinha {
-    0% {
-        opacity: 1;
-        width: 118.5px;
-        margin-right: 8px;
-      }
-    100% {
-        opacity: 0;
-        width:0px;
-        margin-right: 0;
-        
-      }
-
-}
-
-
-
-
-
 #quarto{
     display: none;
     font-size: 41px;
@@ -154,7 +142,7 @@ body {
 #quarto.activeQuarto{
     display: flex;
     margin-right: 12px;
-    animation: fade-in 0.5s;
+    animation: fade-in 0.2s;
 
 }
 
@@ -177,7 +165,7 @@ body {
 #sala.activeSala{
     display: flex;
     margin-right: 12px;
-    animation: fade-in 0.5s;
+    animation: fade-in 0.2s;
 }
 
 
@@ -201,7 +189,7 @@ body {
 #banheiro.activeBanheiro{
     display: flex;
     margin-right: 12px;
-    animation: fade-in 0.5s;
+    animation: fade-in 0.2s;
 }
 
 #nomeBanheiro{
@@ -223,7 +211,7 @@ body {
 #lavanderia.activeLavanderia{
     display: flex;
     margin-right: 12px;
-    animation: fade-in 0.5s;
+    animation: fade-in 0.2s;
 }
 
 
