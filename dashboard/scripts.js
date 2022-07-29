@@ -115,19 +115,25 @@ function abrir(a) {
         break;
 
         case 'ilum':
-            container312.style.display = 'flex';
+            if (container312.style.display == 'none'){
+                container312.style.display = 'flex'
+            }else{container312.style.display = 'none'};
             container322.style.display = 'none';
             container332.style.display = 'none';
         break;
         case 'forn':
+            if (container322.style.display == 'none'){
+                container322.style.display = 'flex'
+            }else{container322.style.display = 'none'};
             container312.style.display = 'none';
-            container322.style.display = 'flex';
             container332.style.display = 'none';
         break;
         case 'exaus':
+            if (container332.style.display == 'none'){
+                container332.style.display = 'flex'
+            }else{container332.style.display = 'none'};
             container312.style.display = 'none';
             container322.style.display = 'none';
-            container332.style.display = 'flex';
         break;
 
         case 'teto':
