@@ -321,8 +321,15 @@ body {
     flex-direction: column;
     width: 95%;
     height: 550px;
-    border-radius: 15px;        margin: auto;
+    border-radius: 15px;
+    margin: auto;
 }
+
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
 
 .container31 {
     display: flex;
@@ -336,7 +343,6 @@ body {
 .container311{
     display: flex;
     justify-content: space-around;
-
 }
 
 .container3111{
@@ -354,6 +360,23 @@ body {
 }
 
 
+input.iluminacaoCheckbox {
+    display: none;
+}
+
+
+input.iluminacaoCheckbox:checked + .labelIluminacaoCheckbox .container312 {
+    display: flex;
+}
+
+
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO TETO -----------------    */ 
+
+input.iluminacaoCheckboxTeto {
+    display: none;
+}
+
 .bttnTeto {
     display: flex;
     width: 130px;
@@ -369,10 +392,18 @@ body {
     box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.35);
 }
 
-.activeTeto
-{
+input.iluminacaoCheckboxTeto:checked + .labelIluminacaoCheckboxTeto .bttnTeto {
     border-bottom: 8px solid #BDE038;
 }
+
+
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO PIA -----------------    */ 
+
+input.iluminacaoCheckboxPia {
+    display: none;
+}
+
 
 .bttnPia {
     display: flex;
@@ -389,10 +420,24 @@ body {
     box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.35);
 }
 
-.activePia{
+input.iluminacaoCheckboxPia:checked + .labelIluminacaoCheckboxPia .bttnPia {
     border-bottom: 8px solid #BDE038;
 }
 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */ 
+/* ---------------------------- CHECKBOX ILUMINAÇÃO -----------------    */
+
+
+
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
 
 .container32 {
     display: flex;
@@ -420,10 +465,30 @@ body {
     display: none;
     justify-content: space-around;
 }
+
+
+input.ForFogCheckbox {
+    display: none;
+}
+
+input.ForFogCheckbox:checked + .labelForFogCheckbox .container322 {
+    display: flex;
+}
+
+
+
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO ENERGIA -----------------------------------    */
+
+input.ForFogCheckboxEnergia {
+    display: none;
+}
+
+
 .bttnFog {
     display: flex;
     width: 130px;
-    height: 60px;
+    height: 50px;
     margin-bottom: 20px;
     border-radius: 10px;
     border-bottom: 8px solid #A62B1F;
@@ -435,11 +500,26 @@ body {
     box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.35);
 }
 
-.activeForFog{
+input.ForFogCheckboxEnergia:checked + .labelForFogCheckboxEnergia .bttnFog {
     border-bottom: 8px solid #BDE038;
 }
 
 
+
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+/* ---------------------------- CHECKBOX FORNO E FOGÃO -----------------------------------    */
+
+
+
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
 
 .container33 {
     display: flex;
@@ -469,7 +549,20 @@ body {
     flex-direction: column;
 }
 
+input.ExaustorCheckbox {
+    display: none;
+}
 
+input.ExaustorCheckbox:checked + .labelExaustorCheckbox .container332 {
+    display: flex;
+}
+
+
+
+
+input.ExaustorCheckboxLigar {
+    display: none;
+}
 .container3321 {
     display: flex;
     flex-direction: row;
@@ -491,10 +584,9 @@ body {
     box-shadow:  2px 2px 2px rgba(0, 0, 0, 0.35);
 }
 
-.activeExaust{
+input.ExaustorCheckboxLigar:checked + .labelExaustorCheckboxLigar .bttnExaust {
     border-bottom: 8px solid #BDE038;
 }
-
 
 
 .container3322 {
@@ -502,6 +594,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
 }
+
 
 .bttnTemForn{
     display: flex;
@@ -564,3 +657,11 @@ input[type="checkbox"]:before {
 input:checked[type="checkbox"]:before {
     left: 22px;
 }
+
+
+
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
+/* ---------------------------- CHECKBOX EXAUSTOR ----------------------------------------    */
