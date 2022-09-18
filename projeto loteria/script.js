@@ -61,6 +61,7 @@ quadro.addEventListener('click', e => {
                 return console.log(elem)
             })
             arr15 = []
+            dEscolhidasNum.innerHTML = arr15.length
             console.log('catch')
         } else if (lore2.contains('enviarDezEscolhidas')) {
             console.log('foi')
