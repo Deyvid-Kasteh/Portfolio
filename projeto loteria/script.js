@@ -80,7 +80,13 @@ quadro.addEventListener('click', e => {
         } else if (lore2.contains('enviarDezEscolhidas') && arr15.length == 15) {
             let receber = document.querySelector('.receber')
             let arrSrt = arr15value.sort()
-            receber.innerHTML = (`<p>${arrSrt.toString()}</p>`)
+            arrSrt.forEach(element => {
+                const bolaEscolhida = document.createElement("div")
+                bolaEscolhida.setAttribute("class", "bolaEscolhida");
+                bolaEscolhida.innerHTML = `${element}`
+                receber.appendChild(bolaEscolhida)
+            });
+            //receber.innerHTML = (`<p>${arrSrt.toString()}</p>`)
             console.log('foi')
         }
 
