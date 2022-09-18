@@ -15,13 +15,16 @@ let dEscolhidasNum = document.querySelector('.dEscolhidasNum')
 let conteinerBottom = document.querySelector('.conteinerBottom')
 
 let arr15 = []
+let arr15value = []
 
 
 quadro.addEventListener('click', e => {
         // console.log(e.target.id)
         //---------------------///
+        const lor = e.target
         const lore = e.target.classList
         const loreId = e.target.id
+        const loreValue = e.target.value
         const loreQuery = document.querySelector(`#${loreId}`)
 
         if (arr15.length < 15) {
@@ -29,25 +32,33 @@ quadro.addEventListener('click', e => {
             if (!lore.contains('clickedDez')) {
                 loreQuery.classList.add('clickedDez')
                 arr15.push(loreId)
+                arr15value.push(loreValue)
                 dEscolhidasNum.innerHTML = arr15.length
                 //-----------------------//
                 console.log(arr15)
                 console.log(arr15.length)
+                console.log(loreValue)
             } else {
                 loreQuery.classList.remove('clickedDez')
                 arr15.splice(arr15.indexOf(loreId), 1)
+                arr15value.splice(arr15value.indexOf(loreValue), 1)
                 dEscolhidasNum.innerHTML = arr15.length
                 //-----------------------//
                 console.log(arr15)
+                console.log(arr15value)
                 console.log(arr15.length)
+                console.log(arr15value.length)
             }
         } else if (lore.contains('clickedDez')) {  
             loreQuery.classList.remove('clickedDez')
             arr15.splice(arr15.indexOf(loreId), 1)
+            arr15value.splice(arr15value.indexOf(loreValue), 1)
             dEscolhidasNum.innerHTML = arr15.length
             //-----------------------//
             console.log(arr15)
+            console.log(arr15value)
             console.log(arr15.length)
+            console.log(arr15value.length)
         }
     })
 
@@ -61,9 +72,15 @@ quadro.addEventListener('click', e => {
                 return console.log(elem)
             })
             arr15 = []
+            arr15value = []
             dEscolhidasNum.innerHTML = arr15.length
             console.log('catch')
-        } else if (lore2.contains('enviarDezEscolhidas')) {
+            console.log(arr15value.length)
+
+        } else if (lore2.contains('enviarDezEscolhidas') && arr15.length == 15) {
+            let receber = document.querySelector('.receber')
+            let arrSrt = arr15value.sort()
+            receber.innerHTML = (`<p>${arrSrt.toString()}</p>`)
             console.log('foi')
         }
 
