@@ -13,10 +13,137 @@ let input11pts = document.querySelector("#input11pts")
 let quadro = document.querySelector(".quadro")
 let dEscolhidasNum = document.querySelector('.dEscolhidasNum')
 let conteinerBottom = document.querySelector('.conteinerBottom')
+const receber = document.querySelector('.receber')
+const receber15pontos = document.querySelector('.receber15pontos')
+const receber14pontos = document.querySelector('.receber14pontos')
+const receber13pontos = document.querySelector('.receber13pontos')
+const receber12pontos = document.querySelector('.receber12pontos')
+const receber11pontos = document.querySelector('.receber11pontos')
+
+
+
+
+
 
 let arr15 = []
 let arr15value = []
 
+
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+
+async function buscarResultado() {
+    let response = await fetch(URl)
+    let data = await response.json()
+    let resultadosTodos = await data.map(dezen => dezen.dezenas)
+    //let primeiroResultado = await resultadosTodos[0].join(" ")
+
+
+    let bora = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15']
+
+    let arrDeTeste = arr15value
+
+
+    const arrDeTeste01 = new Array
+
+    if (arrDeTeste.length == 15) {
+
+    let resultadosForeach = await resultadosTodos.forEach( elekent => {
+        
+        const arrDeTesteFinal = new Array()
+
+        elekent.forEach( ele => {
+
+            //const arrDeTesteFinal = new Array()
+
+        if ( ele.includes(arrDeTeste[0])) {
+            arrDeTesteFinal.push(arrDeTeste[0])
+        }
+        
+        if (ele.includes(arrDeTeste[1])) {
+            arrDeTesteFinal.push(arrDeTeste[1])
+        }
+
+        if (ele.includes(arrDeTeste[2])) {
+            arrDeTesteFinal.push(arrDeTeste[2])
+        }
+
+        if (ele.includes(arrDeTeste[3])) {
+            arrDeTesteFinal.push(arrDeTeste[3])}
+
+        if (ele.includes(arrDeTeste[4])) {
+            arrDeTesteFinal.push(arrDeTeste[4])
+        }
+
+        if (ele.includes(arrDeTeste[5])) {
+            arrDeTesteFinal.push(arrDeTeste[5])
+        }
+
+        if (ele.includes(arrDeTeste[6])) {
+            arrDeTesteFinal.push(arrDeTeste[6])
+        }
+
+        if (ele.includes(arrDeTeste[7])) {
+            arrDeTesteFinal.push(arrDeTeste[7])
+        }
+
+        if (ele.includes(arrDeTeste[8])) {
+            arrDeTesteFinal.push(arrDeTeste[8])
+        }
+
+        if (ele.includes(arrDeTeste[9])) {
+            arrDeTesteFinal.push(arrDeTeste[9])
+        }
+
+        if (ele.includes(arrDeTeste[10])) {
+            arrDeTesteFinal.push(arrDeTeste[10])
+        }
+
+        if (ele.includes(arrDeTeste[11])) {
+            arrDeTesteFinal.push(arrDeTeste[11])
+        }
+
+        if (ele.includes(arrDeTeste[12])) {
+            arrDeTesteFinal.push(arrDeTeste[12])
+        }
+
+        if (ele.includes(arrDeTeste[13])) {
+            arrDeTesteFinal.push(arrDeTeste[13])
+        }
+
+        if (ele.includes(arrDeTeste[14])) {
+            arrDeTesteFinal.push(arrDeTeste[14])
+        }
+
+        
+    })
+    arrDeTeste01.push(arrDeTesteFinal)
+})}
+
+    let passo02 = await arrDeTeste01.filter( eli => eli.length > 10 )
+
+    
+
+    return passo02
+
+    
+}
+
+
+
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//-------------------------------------------------------//
 
 quadro.addEventListener('click', e => {
         // console.log(e.target.id)
@@ -73,21 +200,128 @@ quadro.addEventListener('click', e => {
             })
             arr15 = []
             arr15value = []
+
+            receber15pontos.innerHTML = ''
+            receber14pontos.innerHTML = ''
+            receber13pontos.innerHTML = ''
+            receber12pontos.innerHTML = ''
+            receber11pontos.innerHTML = ''
+            receber.innerHTML = ''
+
             dEscolhidasNum.innerHTML = arr15.length
             console.log('catch')
             console.log(arr15value.length)
 
         } else if (lore2.contains('enviarDezEscolhidas') && arr15.length == 15) {
-            let receber = document.querySelector('.receber')
-            let arrSrt = arr15value.sort()
-            arrSrt.forEach(element => {
-                const bolaEscolhida = document.createElement("div")
-                bolaEscolhida.setAttribute("class", "bolaEscolhida");
-                bolaEscolhida.innerHTML = `${element}`
-                receber.appendChild(bolaEscolhida)
-            });
+
+            async function bus15Resul() {
+
+                let passo021 = await buscarResultado()
+                let passo0311 = await passo021.filter( eli => eli.length == 11 )
+                let passo0312 = await passo021.filter( eli => eli.length == 12 )
+                let passo0313 = await passo021.filter( eli => eli.length == 13 )
+                let passo0314 = await passo021.filter( eli => eli.length == 14 )
+                let passo0315 = await passo021.filter( eli => eli.length == 15 )
+                console.log('foi1')
+                let arrSrt = arr15value.sort()
+                arrSrt.forEach(element => {
+                    const bolaEscolhida = document.createElement("div")
+                    bolaEscolhida.setAttribute("class", "bolaEscolhida");
+                    bolaEscolhida.innerHTML = `${element}`
+                    receber.appendChild(bolaEscolhida)
+                    console.log('foi2')
+                });
+            //-----------//
+            passo0315.forEach(ele15 => 
+                {
+                    const recerberDiv15 = document.createElement('div')
+                    recerberDiv15.setAttribute('class', 'divBolaEscolhida')
+                    ele15.forEach( ele151 => 
+                    {
+                        const bolaVerificada15 = document.createElement('div')
+                        bolaVerificada15.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada15.innerHTML = `${ele151}`
+                        recerberDiv15.appendChild(bolaVerificada15)
+                    })
+                    receber15pontos.appendChild(recerberDiv15)
+
+
+            })
+            //-----------//
+            //-----------//
+            passo0314.forEach(ele14 => 
+                {
+                    const recerberDiv14 = document.createElement('div')
+                    recerberDiv14.setAttribute('class', 'divBolaEscolhida')
+                    ele14.forEach( ele141 => 
+                    {
+                        const bolaVerificada14 = document.createElement('div')
+                        bolaVerificada14.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada14.innerHTML = `${ele141}`
+                        recerberDiv14.appendChild(bolaVerificada14)
+                    })
+                    receber14pontos.appendChild(recerberDiv14)
+
+
+            })
+            //-----------//
+            passo0313.forEach(ele13 => 
+                {
+                    const recerberDiv13 = document.createElement('div')
+                    recerberDiv13.setAttribute('class', 'divBolaEscolhida')
+                    ele13.forEach( ele131 => 
+                    {
+                        const bolaVerificada13 = document.createElement('div')
+                        bolaVerificada13.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada13.innerHTML = `${ele131}`
+                        recerberDiv13.appendChild(bolaVerificada13)
+                    })
+                    receber13pontos.appendChild(recerberDiv13)
+
+            })
+            //-----------//
+            //-----------//
+            passo0312.forEach(ele12 => 
+                {
+                    const recerberDiv12 = document.createElement('div')
+                    recerberDiv12.setAttribute('class', 'divBolaEscolhida')
+                    ele12.forEach( ele121 => 
+                    {
+                        const bolaVerificada12 = document.createElement('div')
+                        bolaVerificada12.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada12.innerHTML = `${ele121}`
+                        recerberDiv12.appendChild(bolaVerificada12)
+                    })
+                    receber12pontos.appendChild(recerberDiv12)
+
+            })
+            //-----------//
+            //-----------//
+            passo0311.forEach(ele11 => 
+                {   
+                    const recerberDiv11 = document.createElement('div')
+                    recerberDiv11.setAttribute('class', 'divBolaEscolhida') 
+                    ele11.forEach( ele111 => 
+                    {
+                        const bolaVerificada11 = document.createElement('div')
+                        bolaVerificada11.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada11.innerHTML = `${ele111}`
+                        recerberDiv11.appendChild(bolaVerificada11)
+                    })
+                    receber11pontos.appendChild(recerberDiv11)
+
+
+            })
+            //-----------//
+
+                
+
+            }
+            
+            
             //receber.innerHTML = (`<p>${arrSrt.toString()}</p>`)
-            console.log('foi')
+            bus15Resul()
+            console.log('foi3')
         }
 
     })
@@ -96,6 +330,17 @@ quadro.addEventListener('click', e => {
 
     
 
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
+//---------------------------------------------------------//
 
 
 
@@ -181,98 +426,9 @@ async function buscarResultadoLatest() {
 
 
 
-async function buscarResultado() {
-    let response = await fetch(URl)
-    let data = await response.json()
-    let resultadosTodos = await data.map(dezen => dezen.dezenas)
-    //let primeiroResultado = await resultadosTodos[0].join(" ")
-
-    let arrDeTeste = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15']
-
-    const arrDeTeste01 = new Array
-
-    let resultadosForeach = await resultadosTodos.forEach( elekent => {
-        
-        const arrDeTesteFinal = new Array()
-
-        elekent.forEach( ele => {
-
-            //const arrDeTesteFinal = new Array()
-
-        if ( ele.includes(arrDeTeste[0])) {
-            arrDeTesteFinal.push(arrDeTeste[0])
-        }
-        
-        if (ele.includes(arrDeTeste[1])) {
-            arrDeTesteFinal.push(arrDeTeste[1])
-        }
-
-        if (ele.includes(arrDeTeste[2])) {
-            arrDeTesteFinal.push(arrDeTeste[2])
-        }
-
-        if (ele.includes(arrDeTeste[3])) {
-            arrDeTesteFinal.push(arrDeTeste[3])}
-
-        if (ele.includes(arrDeTeste[4])) {
-            arrDeTesteFinal.push(arrDeTeste[4])
-        }
-
-        if (ele.includes(arrDeTeste[5])) {
-            arrDeTesteFinal.push(arrDeTeste[5])
-        }
-
-        if (ele.includes(arrDeTeste[6])) {
-            arrDeTesteFinal.push(arrDeTeste[6])
-        }
-
-        if (ele.includes(arrDeTeste[7])) {
-            arrDeTesteFinal.push(arrDeTeste[7])
-        }
-
-        if (ele.includes(arrDeTeste[8])) {
-            arrDeTesteFinal.push(arrDeTeste[8])
-        }
-
-        if (ele.includes(arrDeTeste[9])) {
-            arrDeTesteFinal.push(arrDeTeste[9])
-        }
-
-        if (ele.includes(arrDeTeste[10])) {
-            arrDeTesteFinal.push(arrDeTeste[10])
-        }
-
-        if (ele.includes(arrDeTeste[11])) {
-            arrDeTesteFinal.push(arrDeTeste[11])
-        }
-
-        if (ele.includes(arrDeTeste[12])) {
-            arrDeTesteFinal.push(arrDeTeste[12])
-        }
-
-        if (ele.includes(arrDeTeste[13])) {
-            arrDeTesteFinal.push(arrDeTeste[13])
-        }
-
-        if (ele.includes(arrDeTeste[14])) {
-            arrDeTesteFinal.push(arrDeTeste[14])
-        }
-
-        
-    })
-    arrDeTeste01.push(arrDeTesteFinal)
-})
-
-    let passo02 = await arrDeTeste01.filter( eli => eli.length > 12 )
-
-    return console.log(passo02)
-
-    
-}
 
 
-
-buscarResultado()
+//buscarResultado()
 
 
 
@@ -294,6 +450,7 @@ const test3 = conditions.reduce((a,c) => a + str3.includes(c), 0) == 1;
 //console.log(`Loose matching, 2 matches "${str1}" => ${test1}`);
 //console.log(`Loose matching, 0 matches "${str2}" => ${test2}`);
 //console.log(`Exact matching, 1 matches "${str3}" => ${test3}`);
+
 
 
 
