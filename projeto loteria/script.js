@@ -182,35 +182,154 @@ async function buscarResultadoLatest() {
 
 
 async function buscarResultado() {
-    bolas.innerHTML = " "
     let response = await fetch(URl)
     let data = await response.json()
     let resultadosTodos = await data.map(dezen => dezen.dezenas)
     //let primeiroResultado = await resultadosTodos[0].join(" ")
-    let resultadosForEach = await resultadosTodos[0]
+
+    let arrDeTeste = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15']
+
+    const arrDeTeste01 = new Array
+
+    let resultadosForeach = await resultadosTodos.forEach( elekent => {
+        
+        const arrDeTesteFinal = new Array()
+
+        elekent.forEach( ele => {
+
+            //const arrDeTesteFinal = new Array()
+
+        if ( ele.includes(arrDeTeste[0])) {
+            arrDeTesteFinal.push(arrDeTeste[0])
+        }
+        
+        if (ele.includes(arrDeTeste[1])) {
+            arrDeTesteFinal.push(arrDeTeste[1])
+        }
+
+        if (ele.includes(arrDeTeste[2])) {
+            arrDeTesteFinal.push(arrDeTeste[2])
+        }
+
+        if (ele.includes(arrDeTeste[3])) {
+            arrDeTesteFinal.push(arrDeTeste[3])}
+
+        if (ele.includes(arrDeTeste[4])) {
+            arrDeTesteFinal.push(arrDeTeste[4])
+        }
+
+        if (ele.includes(arrDeTeste[5])) {
+            arrDeTesteFinal.push(arrDeTeste[5])
+        }
+
+        if (ele.includes(arrDeTeste[6])) {
+            arrDeTesteFinal.push(arrDeTeste[6])
+        }
+
+        if (ele.includes(arrDeTeste[7])) {
+            arrDeTesteFinal.push(arrDeTeste[7])
+        }
+
+        if (ele.includes(arrDeTeste[8])) {
+            arrDeTesteFinal.push(arrDeTeste[8])
+        }
+
+        if (ele.includes(arrDeTeste[9])) {
+            arrDeTesteFinal.push(arrDeTeste[9])
+        }
+
+        if (ele.includes(arrDeTeste[10])) {
+            arrDeTesteFinal.push(arrDeTeste[10])
+        }
+
+        if (ele.includes(arrDeTeste[11])) {
+            arrDeTesteFinal.push(arrDeTeste[11])
+        }
+
+        if (ele.includes(arrDeTeste[12])) {
+            arrDeTesteFinal.push(arrDeTeste[12])
+        }
+
+        if (ele.includes(arrDeTeste[13])) {
+            arrDeTesteFinal.push(arrDeTeste[13])
+        }
+
+        if (ele.includes(arrDeTeste[14])) {
+            arrDeTesteFinal.push(arrDeTeste[14])
+        }
+
+        
+    })
+    arrDeTeste01.push(arrDeTesteFinal)
+})
+
+    let passo02 = await arrDeTeste01.filter( eli => eli.length > 12 )
+
+    return console.log(passo02)
+
     
-    return resultadosForEach.forEach(element => {
-        const elemento = document.createElement("div")
-        elemento.setAttribute("class", "bola");
-        elemento.innerHTML = `${element}`
-        bolas.appendChild(elemento)
-    });
-
-
-    //element.setAttribute("class", "democlass");
-    //let resultString = await primeiroResultado.toString()
-
-    //return resultadosForEach
-    
-    //containerResultado.innerHTML = `<p>os números são ${primeiroResultado}</p>`
 }
 
 
 
+buscarResultado()
 
 
 
-//buscarResultadoLatest()
+// test cases
+const str1 = 'hi hello, how do you do?';
+const str2 = 'regular string';
+const str3 = 'hello there';
+
+// do the test strings contain these terms?
+const conditions = ["hello", "hi", "howdy"];
+
+// run the tests against every element in the array
+const test1 = conditions.some(el => str1.includes(el));
+const test2 = conditions.some(el => str2.includes(el));
+// strictly check that contains 1 and only one match
+const test3 = conditions.reduce((a,c) => a + str3.includes(c), 0) == 1;
+
+// display results
+//console.log(`Loose matching, 2 matches "${str1}" => ${test1}`);
+//console.log(`Loose matching, 0 matches "${str2}" => ${test2}`);
+//console.log(`Exact matching, 1 matches "${str3}" => ${test3}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
