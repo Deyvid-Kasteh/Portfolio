@@ -215,6 +215,12 @@ quadro.addEventListener('click', e => {
         } else if (lore2.contains('enviarDezEscolhidas') && arr15.length == 15) {
 
             async function bus15Resul() {
+                receber.innerHTML = ' ';
+                receber11pontos.innerHTML = ' ';
+                receber12pontos.innerHTML = ' ';
+                receber13pontos.innerHTML = ' ';
+                receber14pontos.innerHTML = ' ';
+                receber15pontos.innerHTML = ' ';
 
                 let passo021 = await buscarResultado()
                 let passo0311 = await passo021.filter( eli => eli.length == 11 )
