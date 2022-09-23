@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     min-height: 600px;
     width: 90%;
-    background-color: blueviolet;
+    background-color: #69358C;
     margin: auto;
     margin-top: 20px;
     border-radius: 10px;
@@ -173,7 +173,8 @@ body {
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: rgb(152, 69, 230);
+    background-color: #A85EF2;
+    border-radius: 10px;
 
 }
 
@@ -188,6 +189,7 @@ body {
     margin-bottom: 20px;
     color: white;
     font-size: 1.3em;
+    border-radius: 10px;
 
 }
 
@@ -197,18 +199,18 @@ body {
     width: 300px;
     display: grid;
     gap: 7px;
-    background-color: rgb(152, 69, 230);
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .dez {
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 1.8em;
 }
 
 .clickedDez{
-    background-color: greenyellow;
+    background-color: #F2E857;
+    font-size: 2em;
 }
 
 .dezenasEscolhidas{
@@ -245,7 +247,7 @@ body {
     display: flex;
     height: 30px;
     width: 250px;
-    background-color: greenyellow;
+    background-color: rgb(104, 14, 187);
     justify-content: center;
     align-items: center;
     color: white;
@@ -261,7 +263,7 @@ body {
     height: 65px;
     width: 250px;
     margin-top: 40px;
-    background-color: darkmagenta;
+    background-color: rgb(104, 14, 187);
     color: white;
     font-size: 3em;
     border-radius: 5px;
@@ -271,6 +273,7 @@ body {
 .teste{
     display: flex;
     flex-direction: column;
+    min-width: 80%;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -278,12 +281,11 @@ body {
 .receber{
     display: flex;
     flex-direction: row;
-    padding-left: 10px;
-    padding-right: 10px;
-    min-width: 350px;
+    min-width: 100%;
     min-height: 100px;
     background-color: rgb(104, 14, 187);
     border: 1px solid white;
+    border-radius: 20px;
 }
 
 .bolaEscolhida {
@@ -301,6 +303,7 @@ body {
 .receberfetch{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .receber11pontos, 
@@ -310,12 +313,12 @@ body {
 .receber15pontos{
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
-    min-width: 350px;
+    min-width: 100%;
     min-height: 100px;
     border-top: 5px solid white;
     background-color: rgb(104, 14, 187);
+    border-radius: 20px;
+
 }
 
 .divBolaEscolhida {

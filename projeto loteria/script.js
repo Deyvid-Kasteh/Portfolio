@@ -350,6 +350,7 @@ async function buscarResultadoLatest() {
     bolas.innerHTML = " "
     let response = await fetch(latest);
     let data = await response.json();
+    console.log(data)
     let resultadosData = await data.data;
     let resultadosForEachLatest = await data.dezenas
 
@@ -360,8 +361,13 @@ async function buscarResultadoLatest() {
     {
         let premio15Puro = data.premiacoes[0].premio
         let premio15 = premio15Puro.replace(",", ".")
-        let premioTotal = vencedores15 * premio15
+        let premio15Num = Number(premio15.replaceAll(".", ""))
+        let premioTotal = vencedores15 * premio15Num
+        inputPremio.innerHTML = premioTotal;
+        input15pts.innerHTML = premioTotal;
+        console.log(premio15Puro)
         console.log(premio15)
+        console.log(premio15Num)
         console.log(premioTotal)
     }
     else {
@@ -393,7 +399,6 @@ async function buscarResultadoLatest() {
     let inputData = document.querySelector("#inputData");
     inputData.setAttribute("class", "dataDoSorteio");
     inputData.innerHTML = `${resultadosData}`;
-    console.log(data)
     console.log(vencedores15)
     
     
