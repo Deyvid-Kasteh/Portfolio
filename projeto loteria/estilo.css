@@ -1,13 +1,14 @@
 body {
     padding: 0;
     margin: 0;
+    background-color: #737EBF;
 }
 
 .tittle{
     display: flex;
     margin-top: 30px;
     margin-bottom: 60px;
-    background-color: #A85EF2;
+    background-color: #939ABF;
     min-width: 90%;
     min-height: 8em;
     align-items: center;
@@ -33,18 +34,14 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    box-shadow: 1px 2px 2px rgb(73, 21, 122);
     margin-bottom: 15px;
 }
 
 #container{
     display: flex;
     flex-direction: column;
-    min-height: 600px;
-    width: 90%;
-    background-color: #69358C;
-    margin: auto;
-    margin-top: 20px;
+    height: 100%;
+    width: 100%;
     border-radius: 10px;
     align-items: center;
     padding-bottom: 20px;
@@ -69,7 +66,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #A85EF2;
+    background-color: #939ABF;
 }
 
 .bola {
@@ -81,11 +78,11 @@ body {
     margin: 10px;
     justify-content: center;
     align-items: center;
-    color: #69358C;
+    color: #737EBF;
     font-size: 2.5em;
     font-weight: bold;
     /*border: 0.5px solid;*/
-    box-shadow: 0px 1px 2px #69358C;
+    box-shadow: 0px 1px 2px #737EBF;
 }
 
 .resultadosAbasTop {
@@ -95,7 +92,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    background-color: #A85EF2;
+    background-color: #939ABF;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     color: white;
@@ -127,10 +124,9 @@ body {
     width: 100%;
     color: white;
     justify-content: center;
-    background-color: #A85EF2;
+    background-color: #939ABF;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 0px 2px 1px rgba(73, 21, 122, 0.644);
 }
 
 
@@ -182,7 +178,7 @@ body {
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: #A85EF2;
+    background-color: #939ABF;
     border-radius: 10px;
 
 }
@@ -194,7 +190,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 5px;
-    background-color: #69358C;
+    background-color: #737EBF;
     margin-bottom: 20px;
     color: white;
     font-size: 1.3em;
@@ -256,7 +252,7 @@ body {
     display: flex;
     height: 30px;
     width: 250px;
-    background-color: #69358C;
+    background-color: #737EBF;
     justify-content: center;
     align-items: center;
     color: white;
@@ -272,7 +268,7 @@ body {
     height: 65px;
     width: 250px;
     margin-top: 40px;
-    background-color: #69358C;
+    background-color: #737EBF;
     color: white;
     font-size: 2.5em;
     border-radius: 5px;
@@ -299,7 +295,7 @@ body {
     flex-direction: row;
     width: 100%;
     min-height: 100px;
-    background-color: #A85EF2;
+    background-color: #939ABF;
     border: 1px solid white;
     border-radius: 20px;
     align-items: center;
@@ -312,7 +308,7 @@ body {
     width: 100%;
     min-height: 100px;
     border: 2px solid white;
-    background-color: #A85EF2;
+    background-color: #939ABF;
     border-radius: 45px;
     margin-top: 40px;
     margin-bottom: 5px;
@@ -328,7 +324,7 @@ body {
     border-top-right-radius: 45px;
     width: 100%;
     justify-content: center;
-    color: #69358C;
+    color: #737EBF;
     font-weight: bold;
 }
 
@@ -365,7 +361,7 @@ body {
     margin: 20px;
     align-items: center;
     justify-content: center;
-    border: 2px solid #69358C;
+    border: 2px solid #737EBF;
     border-radius: 15px;
     padding: 8px;
 }
@@ -379,10 +375,10 @@ body {
     margin: 8px;
     font-size: 1.3em;
     font-weight: bold;
-    color: #69358C;
+    color: #737EBF;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 1px #69358C;
+    box-shadow: 1px 1px 1px #737EBF;
 }
 
 .bolaEscolhida2 {
@@ -395,7 +391,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    color: #69358C;
+    color: #737EBF;
 }
 
 
