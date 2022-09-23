@@ -19,6 +19,11 @@ const receber14pontos = document.querySelector('.receber14pontos')
 const receber13pontos = document.querySelector('.receber13pontos')
 const receber12pontos = document.querySelector('.receber12pontos')
 const receber11pontos = document.querySelector('.receber11pontos')
+const textoPontosinputs15 = document.querySelector('.textoPontosinputs15')
+const textoPontosinputs14 = document.querySelector('.textoPontosinputs14')
+const textoPontosinputs13 = document.querySelector('.textoPontosinputs13')
+const textoPontosinputs12 = document.querySelector('.textoPontosinputs12')
+const textoPontosinputs11 = document.querySelector('.textoPontosinputs11')
 
 
 
@@ -228,7 +233,7 @@ quadro.addEventListener('click', e => {
                 let passo0313 = await passo021.filter( eli => eli.length == 13 )
                 let passo0314 = await passo021.filter( eli => eli.length == 14 )
                 let passo0315 = await passo021.filter( eli => eli.length == 15 )
-                console.log('foi1')
+                console.log(passo0315)
                 let arrSrt = arr15value.sort()
                 arrSrt.forEach(element => {
                     const bolaEscolhida = document.createElement("div")
@@ -238,39 +243,51 @@ quadro.addEventListener('click', e => {
                     console.log('foi2')
                 });
             //-----------//
-            passo0315.forEach(ele15 => 
+                if (passo0315.length > 0) {
+                    console.log(passo0315)
+                    textoPontosinputs15.innerHTML = `${passo0315.length} jogos acertados`
+                }
+
+
+                passo0315.forEach(ele15 => 
                 {
                     const recerberDiv15 = document.createElement('div')
                     recerberDiv15.setAttribute('class', 'divBolaEscolhida')
                     ele15.forEach( ele151 => 
                     {
                         const bolaVerificada15 = document.createElement('div')
-                        bolaVerificada15.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada15.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada15.innerHTML = `${ele151}`
                         recerberDiv15.appendChild(bolaVerificada15)
                     })
                     receber15pontos.appendChild(recerberDiv15)
-
-
-            })
+                })
             //-----------//
             //-----------//
-            passo0314.forEach(ele14 => 
-                {
+            if (passo0314.length > 0) {
+                console.log(passo0314)
+                textoPontosinputs14.innerHTML = `${passo0314.length} jogos acertados`
+            }
+                passo0314.forEach(ele14 => 
+                    {
                     const recerberDiv14 = document.createElement('div')
                     recerberDiv14.setAttribute('class', 'divBolaEscolhida')
                     ele14.forEach( ele141 => 
                     {
                         const bolaVerificada14 = document.createElement('div')
-                        bolaVerificada14.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada14.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada14.innerHTML = `${ele141}`
                         recerberDiv14.appendChild(bolaVerificada14)
                     })
                     receber14pontos.appendChild(recerberDiv14)
 
 
-            })
+                    })
             //-----------//
+            if (passo0313.length > 0) {
+                console.log(passo0313)
+                textoPontosinputs13.innerHTML = `${passo0313.length} jogos acertados`
+            }
             passo0313.forEach(ele13 => 
                 {
                     const recerberDiv13 = document.createElement('div')
@@ -278,7 +295,7 @@ quadro.addEventListener('click', e => {
                     ele13.forEach( ele131 => 
                     {
                         const bolaVerificada13 = document.createElement('div')
-                        bolaVerificada13.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada13.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada13.innerHTML = `${ele131}`
                         recerberDiv13.appendChild(bolaVerificada13)
                     })
@@ -287,6 +304,10 @@ quadro.addEventListener('click', e => {
             })
             //-----------//
             //-----------//
+            if (passo0312.length > 0) {
+                console.log(passo0312)
+                textoPontosinputs12.innerHTML = `${passo0312.length} jogos acertados`
+            }
             passo0312.forEach(ele12 => 
                 {
                     const recerberDiv12 = document.createElement('div')
@@ -294,7 +315,7 @@ quadro.addEventListener('click', e => {
                     ele12.forEach( ele121 => 
                     {
                         const bolaVerificada12 = document.createElement('div')
-                        bolaVerificada12.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada12.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada12.innerHTML = `${ele121}`
                         recerberDiv12.appendChild(bolaVerificada12)
                     })
@@ -303,6 +324,10 @@ quadro.addEventListener('click', e => {
             })
             //-----------//
             //-----------//
+            if (passo0311.length > 0) {
+                console.log(passo0311)
+                textoPontosinputs11.innerHTML = `${passo0311.length} jogos acertados`
+            }
             passo0311.forEach(ele11 => 
                 {   
                     const recerberDiv11 = document.createElement('div')
@@ -310,7 +335,7 @@ quadro.addEventListener('click', e => {
                     ele11.forEach( ele111 => 
                     {
                         const bolaVerificada11 = document.createElement('div')
-                        bolaVerificada11.setAttribute("class", "bolaEscolhida");
+                        bolaVerificada11.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada11.innerHTML = `${ele111}`
                         recerberDiv11.appendChild(bolaVerificada11)
                     })

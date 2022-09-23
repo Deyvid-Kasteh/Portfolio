@@ -81,9 +81,11 @@ body {
     margin: 10px;
     justify-content: center;
     align-items: center;
+    color: #69358C;
     font-size: 2.5em;
+    font-weight: bold;
     /*border: 0.5px solid;*/
-    box-shadow: 1px 6px 15px rgba(73, 21, 122, 0.644);
+    box-shadow: 0px 1px 2px #69358C;
 }
 
 .resultadosAbasTop {
@@ -172,7 +174,7 @@ body {
 }
 
 
-
+/*--------------------------*/
 .fazerJogo {
     display: flex;
     flex-direction: column;
@@ -217,7 +219,6 @@ body {
 
 .clickedDez{
     background-color: #F2E857;
-    font-size: 2em;
 }
 
 .dezenasEscolhidas{
@@ -281,7 +282,7 @@ body {
 .teste{
     display: flex;
     flex-direction: column;
-    min-width: 80%;
+    width: 80%;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -305,21 +306,6 @@ body {
     justify-content: center;
 }
 
-
-
-.bolaEscolhida {
-    display: flex;
-    height: 50px;
-    width: 50px;
-    background-color: white;
-    border-radius: 50px;
-    margin: 8px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 1px 6px 15px rgba(73, 21, 122, 0.644);
-}
-
-
 .jogosAcertadorQuadro{
     display: flex;
     flex-direction: column;
@@ -340,11 +326,23 @@ body {
     background-color: #F2E857;
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
-    min-width: 100%;
+    width: 100%;
     justify-content: center;
     color: #69358C;
     font-weight: bold;
 }
+
+.textoPontosinputs15,
+.textoPontosinputs14,
+.textoPontosinputs13,
+.textoPontosinputs12,
+.textoPontosinputs11 {
+    display: flex;
+    margin-left: 20px;
+    font-size: 1em;
+
+}
+
 
 .receber11pontos, 
 .receber12pontos,
@@ -352,10 +350,53 @@ body {
 .receber14pontos,
 .receber15pontos{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .divBolaEscolhida {
     display: flex;
+    height: 150px;
+    width: 150px;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #69358C;
+    border-radius: 15px;
+    padding: 8px;
 }
+
+.bolaEscolhida {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50px;
+    margin: 8px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #69358C;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 1px #69358C;
+}
+
+.bolaEscolhida2 {
+    display: flex;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50px;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #69358C;
+}
+
+
+
