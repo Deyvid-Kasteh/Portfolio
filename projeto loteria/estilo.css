@@ -150,13 +150,43 @@ body {
     font-size: 2em;
 }
 
-.pts{
+.pts {
     display: flex;
     width: 280px;
-    border-bottom: 2px solid #F2E857;
+    border-bottom: 2px solid #737EBF;
     border-radius: 5px;
-    justify-content: space-evenly;
 }
+
+.acertos {
+    display: flex;
+    width: 32%;
+}
+
+.qtGanhadores15,
+.qtGanhadores14,
+.qtGanhadores13,
+.qtGanhadores12,
+.qtGanhadores11 {
+    display: flex;
+    width: 30%;
+}
+
+
+#input15pts,
+#input14pts,
+#input13pts,
+#input12pts,
+#input11pts {
+    display: flex;
+    width: 37%;
+}
+
+svg {
+    color: #F2E857;
+}
+
+
+
 
 .dataDoSorteio{
     display: flex;

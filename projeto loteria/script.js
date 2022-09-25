@@ -24,6 +24,16 @@ const textoPontosinputs14 = document.querySelector('.textoPontosinputs14')
 const textoPontosinputs13 = document.querySelector('.textoPontosinputs13')
 const textoPontosinputs12 = document.querySelector('.textoPontosinputs12')
 const textoPontosinputs11 = document.querySelector('.textoPontosinputs11')
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2E857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>`
+
+const svgMoney = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2E857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`
+
+
+const qtGanhadores15 = document.querySelector('.qtGanhadores15')
+const qtGanhadores14 = document.querySelector('.qtGanhadores14')
+const qtGanhadores13 = document.querySelector('.qtGanhadores13')
+const qtGanhadores12 = document.querySelector('.qtGanhadores12')
+const qtGanhadores11 = document.querySelector('.qtGanhadores11')
 
 
 
@@ -396,6 +406,7 @@ async function buscarResultadoLatest() {
         let premioTotal = vencedores15 * premio15Num
         inputPremio.innerHTML = premioTotal;
         input15pts.innerHTML = premioTotal;
+        qtGanhadores15.innerHTML = `${svg}`
         console.log(premio15Puro)
         console.log(premio15)
         console.log(premio15Num)
@@ -403,26 +414,31 @@ async function buscarResultadoLatest() {
     }
     else {
         inputPremio.innerHTML = "ACUMULOU";
+        qtGanhadores15.innerHTML = `${svg}`
         input15pts.innerHTML = "Nenhum";
     }
 
 
-    let vencedores14 = data.premiacoes[1].vencedores
-    let premio14Puro = data.premiacoes[1].premio
-    input14pts.innerHTML = premio14Puro
+    const vencedores14 = data.premiacoes[1].vencedores
+    qtGanhadores14.innerHTML = `${svg}  ${vencedores14}`
+    const premio14Puro = data.premiacoes[1].premio
+    input14pts.innerHTML = `${svgMoney} ${premio14Puro}` 
 
 
-    let vencedores13 = data.premiacoes[2].vencedores
-    let premio13Puro = data.premiacoes[2].premio
-    input13pts.innerHTML = premio13Puro
+    const vencedores13 = data.premiacoes[2].vencedores
+    qtGanhadores13.innerHTML = `${svg}  ${vencedores13}`
+    const premio13Puro = data.premiacoes[2].premio
+    input13pts.innerHTML = `${svgMoney} ${premio13Puro}`
 
-    let vencedores12 = data.premiacoes[3].vencedores
-    let premio12Puro = data.premiacoes[3].premio
-    input12pts.innerHTML = premio12Puro
+    const vencedores12 = data.premiacoes[3].vencedores
+    qtGanhadores12.innerHTML = `${svg}  ${vencedores12}`
+    const premio12Puro = data.premiacoes[3].premio
+    input12pts.innerHTML = `${svgMoney} ${premio12Puro}`
     
-    let vencedores11 = data.premiacoes[4].vencedores
-    let premio11Puro = data.premiacoes[4].premio
-    input11pts.innerHTML = premio11Puro
+    const vencedores11 = data.premiacoes[4].vencedores
+    qtGanhadores11.innerHTML = `${svg}  ${vencedores11}`
+    const premio11Puro = data.premiacoes[4].premio
+    input11pts.innerHTML = `${svgMoney} ${premio11Puro}`
 
 
 
@@ -443,104 +459,3 @@ async function buscarResultadoLatest() {
 
     });
 }
-
-
-
-
-
-//premiacoes: Array(5)
-//0: {acertos: '15 Pontos', vencedores: 2, premio: '771.473,59'}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//buscarResultado()
-
-
-
-// test cases
-const str1 = 'hi hello, how do you do?';
-const str2 = 'regular string';
-const str3 = 'hello there';
-
-// do the test strings contain these terms?
-const conditions = ["hello", "hi", "howdy"];
-
-// run the tests against every element in the array
-const test1 = conditions.some(el => str1.includes(el));
-const test2 = conditions.some(el => str2.includes(el));
-// strictly check that contains 1 and only one match
-const test3 = conditions.reduce((a,c) => a + str3.includes(c), 0) == 1;
-
-// display results
-//console.log(`Loose matching, 2 matches "${str1}" => ${test1}`);
-//console.log(`Loose matching, 0 matches "${str2}" => ${test2}`);
-//console.log(`Exact matching, 1 matches "${str3}" => ${test3}`);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
-
-
-for (let i = 0; i < resultadoTotal.length; i++) {
-            let contador = i
-            console.log(`Esse é o jogo de numero ${contador}`);
-            
-        }
-
-
-for (let k = 0; k < resultadoTotal[i].length; k++){
-                console.log(resultadoTotal[i][k])}
-
-
-
-
-
-*/
