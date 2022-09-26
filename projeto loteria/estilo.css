@@ -160,12 +160,13 @@ justify-content: center;
     margin: 20px;
     font-size: 2em;
     justify-content: center;
+    color: #F2E857;
 }
 
 .pts {
     display: grid;
-    width: 280px;
-    grid-template-columns: 28% 26% 28%;
+    width: 290px;
+    grid-template-columns: 35% 26% 28%;
     border-bottom: 2px solid #737EBF;
     border-radius: 5px;
     justify-content: space-between;
