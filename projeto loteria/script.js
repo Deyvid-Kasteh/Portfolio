@@ -11,9 +11,8 @@ let input13pts = document.querySelector("#input13pts")
 let input12pts = document.querySelector("#input12pts")
 let input11pts = document.querySelector("#input11pts")
 let quadro = document.querySelector(".quadro")
-let dEscolhidasNum = document.querySelector('.dEscolhidasNum')
+const dEscolhidasNum = document.querySelector('.dEscolhidasNum')
 let conteinerBottom = document.querySelector('.conteinerBottom')
-const receber = document.querySelector('.receber')
 const receber15pontos = document.querySelector('.receber15pontos')
 const receber14pontos = document.querySelector('.receber14pontos')
 const receber13pontos = document.querySelector('.receber13pontos')
@@ -24,6 +23,18 @@ const textoPontosinputs14 = document.querySelector('.textoPontosinputs14')
 const textoPontosinputs13 = document.querySelector('.textoPontosinputs13')
 const textoPontosinputs12 = document.querySelector('.textoPontosinputs12')
 const textoPontosinputs11 = document.querySelector('.textoPontosinputs11')
+
+const jogosAcertadorQuadro15 = document.querySelector('.jogosAcertadorQuadro15')
+const jogosAcertadorQuadro14 = document.querySelector('.jogosAcertadorQuadro14')
+const jogosAcertadorQuadro13 = document.querySelector('.jogosAcertadorQuadro13')
+const jogosAcertadorQuadro12 = document.querySelector('.jogosAcertadorQuadro12')
+const jogosAcertadorQuadro11 = document.querySelector('.jogosAcertadorQuadro11')
+
+
+
+
+
+
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2E857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>`
 
 const svgMoney = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2E857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`
@@ -56,21 +67,19 @@ async function buscarResultado() {
     let response = await fetch(URl)
     let data = await response.json()
     let resultadosTodos = await data.map(dezen => dezen.dezenas)
-    //let primeiroResultado = await resultadosTodos[0].join(" ")
-
-
-    let bora = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15']
-
     let arrDeTeste = arr15value
+    console.log(data)
 
 
     const arrDeTeste01 = new Array
+    const arrCompleto = new Array
 
     if (arrDeTeste.length == 15) {
 
     let resultadosForeach = await resultadosTodos.forEach( elekent => {
         
         const arrDeTesteFinal = new Array()
+        const arrCompleto2 = new Array()
 
         elekent.forEach( ele => {
 
@@ -133,17 +142,17 @@ async function buscarResultado() {
 
         if (ele.includes(arrDeTeste[14])) {
             arrDeTesteFinal.push(arrDeTeste[14])
-        }
-
-        
+        }    
     })
+    if (arrDeTesteFinal.length > 10) {
+        arrCompleto2.push(elekent)
+    }
+
     arrDeTeste01.push(arrDeTesteFinal)
+    arrCompleto.push(arrCompleto2)
+
 })}
-
     let passo02 = await arrDeTeste01.filter( eli => eli.length > 10 )
-
-    
-
     return passo02
 
     
@@ -177,19 +186,14 @@ quadro.addEventListener('click', e => {
                 arr15value.push(loreValue)
                 dEscolhidasNum.innerHTML = arr15.length
                 //-----------------------//
-                console.log(arr15)
-                console.log(arr15.length)
-                console.log(loreValue)
+                
             } else {
                 loreQuery.classList.remove('clickedDez')
                 arr15.splice(arr15.indexOf(loreId), 1)
                 arr15value.splice(arr15value.indexOf(loreValue), 1)
                 dEscolhidasNum.innerHTML = arr15.length
                 //-----------------------//
-                console.log(arr15)
-                console.log(arr15value)
-                console.log(arr15.length)
-                console.log(arr15value.length)
+                
             }
         } else if (lore.contains('clickedDez')) {  
             loreQuery.classList.remove('clickedDez')
@@ -197,10 +201,7 @@ quadro.addEventListener('click', e => {
             arr15value.splice(arr15value.indexOf(loreValue), 1)
             dEscolhidasNum.innerHTML = arr15.length
             //-----------------------//
-            console.log(arr15)
-            console.log(arr15value)
-            console.log(arr15.length)
-            console.log(arr15value.length)
+            
         }
     })
 
@@ -211,7 +212,6 @@ quadro.addEventListener('click', e => {
             arr15.map( function(elem) {
                 let pickedNum = document.querySelector(`#${elem}`)
                 pickedNum.classList.remove('clickedDez')
-                return console.log(elem)
             })
             arr15 = []
             arr15value = []
@@ -221,16 +221,13 @@ quadro.addEventListener('click', e => {
             receber13pontos.innerHTML = ''
             receber12pontos.innerHTML = ''
             receber11pontos.innerHTML = ''
-            receber.innerHTML = ''
 
-            dEscolhidasNum.innerHTML = arr15.length
-            console.log('catch')
-            console.log(arr15value.length)
+            dEscolhidasNum.innerHTML = ''
+            
 
         } else if (lore2.contains('enviarDezEscolhidas') && arr15.length == 15) {
 
             async function bus15Resul() {
-                receber.innerHTML = ' ';
                 receber11pontos.innerHTML = ' ';
                 receber12pontos.innerHTML = ' ';
                 receber13pontos.innerHTML = ' ';
@@ -243,18 +240,9 @@ quadro.addEventListener('click', e => {
                 let passo0313 = await passo021.filter( eli => eli.length == 13 )
                 let passo0314 = await passo021.filter( eli => eli.length == 14 )
                 let passo0315 = await passo021.filter( eli => eli.length == 15 )
-                console.log(passo0315)
-                let arrSrt = arr15value.sort()
-                arrSrt.forEach(element => {
-                    const bolaEscolhida = document.createElement("div")
-                    bolaEscolhida.setAttribute("class", "bolaEscolhida");
-                    bolaEscolhida.innerHTML = `${element}`
-                    receber.appendChild(bolaEscolhida)
-                    console.log('foi2')
-                });
+
             //-----------//
                 if (passo0315.length > 0) {
-                    console.log(passo0315)
                     textoPontosinputs15.innerHTML = `${passo0315.length} jogos acertados`
                 }
 
@@ -275,9 +263,7 @@ quadro.addEventListener('click', e => {
             //-----------//
             //-----------//
             if (passo0314.length > 0) {
-                console.log(passo0314)
                 textoPontosinputs14.innerHTML = `${passo0314.length} jogos acertados`
-            }
                 passo0314.forEach(ele14 => 
                     {
                     const recerberDiv14 = document.createElement('div')
@@ -293,11 +279,12 @@ quadro.addEventListener('click', e => {
 
 
                     })
+                jogosAcertadorQuadro14.style.display = 'flex'
+            }
             //-----------//
             if (passo0313.length > 0) {
-                console.log(passo0313)
                 textoPontosinputs13.innerHTML = `${passo0313.length} jogos acertados`
-            }
+            
             passo0313.forEach(ele13 => 
                 {
                     const recerberDiv13 = document.createElement('div')
@@ -310,14 +297,14 @@ quadro.addEventListener('click', e => {
                         recerberDiv13.appendChild(bolaVerificada13)
                     })
                     receber13pontos.appendChild(recerberDiv13)
-
             })
+            jogosAcertadorQuadro13.style.display = 'flex'
+        }
             //-----------//
             //-----------//
             if (passo0312.length > 0) {
-                console.log(passo0312)
                 textoPontosinputs12.innerHTML = `${passo0312.length} jogos acertados`
-            }
+            
             passo0312.forEach(ele12 => 
                 {
                     const recerberDiv12 = document.createElement('div')
@@ -332,12 +319,13 @@ quadro.addEventListener('click', e => {
                     receber12pontos.appendChild(recerberDiv12)
 
             })
+            jogosAcertadorQuadro12.style.display = 'flex'
+        }
             //-----------//
             //-----------//
             if (passo0311.length > 0) {
-                console.log(passo0311)
                 textoPontosinputs11.innerHTML = `${passo0311.length} jogos acertados`
-            }
+            
             passo0311.forEach(ele11 => 
                 {   
                     const recerberDiv11 = document.createElement('div')
@@ -353,6 +341,8 @@ quadro.addEventListener('click', e => {
 
 
             })
+            jogosAcertadorQuadro11.style.display = 'flex'
+        }
             //-----------//
 
                 
@@ -362,7 +352,6 @@ quadro.addEventListener('click', e => {
             
             //receber.innerHTML = (`<p>${arrSrt.toString()}</p>`)
             bus15Resul()
-            console.log('foi3')
         }
 
     })
@@ -391,31 +380,26 @@ async function buscarResultadoLatest() {
     bolas.innerHTML = " "
     let response = await fetch(latest);
     let data = await response.json();
-    console.log(data)
     let resultadosData = await data.data;
     let resultadosForEachLatest = await data.dezenas
 
 
     // colocar valores
-    let vencedores15 = data.premiacoes[0].vencedores
+    const vencedores15 = data.premiacoes[0].vencedores
     if (vencedores15 > 0)
     {
-        let premio15Puro = data.premiacoes[0].premio
-        let premio15 = premio15Puro.replace(",", ".")
-        let premio15Num = Number(premio15.replaceAll(".", ""))
-        let premioTotal = vencedores15 * premio15Num
+        const premio15Puro = data.premiacoes[0].premio
+        const premio15 = premio15Puro.replace(",", ".")
+        const premio15Num = Number(premio15.replaceAll(".", ""))
+        const premioTotal = vencedores15 * premio15Num
         inputPremio.innerHTML = premioTotal;
         input15pts.innerHTML = premioTotal;
-        qtGanhadores15.innerHTML = `${svg}`
-        console.log(premio15Puro)
-        console.log(premio15)
-        console.log(premio15Num)
-        console.log(premioTotal)
+        qtGanhadores15.innerHTML = `${svg} ${vencedores15}`
     }
     else {
-        inputPremio.innerHTML = "ACUMULOU";
-        qtGanhadores15.innerHTML = `${svg}`
-        input15pts.innerHTML = "Nenhum";
+        inputPremio.innerHTML = "Acumulou";
+        qtGanhadores15.innerHTML = `${svg} 0`
+        input15pts.innerHTML = `${svgMoney} Nada`;
     }
 
 
@@ -446,7 +430,6 @@ async function buscarResultadoLatest() {
     let inputData = document.querySelector("#inputData");
     inputData.setAttribute("class", "dataDoSorteio");
     inputData.innerHTML = `${resultadosData}`;
-    console.log(vencedores15)
     
     
 
