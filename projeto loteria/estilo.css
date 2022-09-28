@@ -395,16 +395,37 @@ svg {
 
 }
 
+.divCompleta {
+    display: grid;
+    grid-template-rows: 8% auto;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #737EBF;
+    border-radius: 15px;
+}
+
+.divData {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
 .divBolaEscolhida {
     display: flex;
     height: 150px;
     width: 150px;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 20px;
     align-items: center;
     justify-content: center;
-    border: 2px solid #737EBF;
     border-radius: 15px;
     padding: 8px;
 }
@@ -435,6 +456,10 @@ svg {
     align-items: center;
     font-weight: bold;
     color: #737EBF;
+}
+
+.bolaEscolhida2Amarela{
+    background-color: #F2E857;
 }
 
 

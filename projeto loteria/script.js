@@ -177,7 +177,7 @@ async function buscarResultado() {
 
     const passo02 = arrComNumerosEDatas
     
-    ///console.log(passo02)
+    console.log(passo02)
     return passo02
 
 }
@@ -288,33 +288,57 @@ quadro.addEventListener('click', e => {
 
                 passo0315.forEach(ele15 => 
                 {
+                    const receberDiv15Completa = document.createElement('div')
+                    receberDiv15Completa.setAttribute('class', 'divCompleta')
+
+                    const receberDiv15Data = document.createElement('div')
+                    receberDiv15Data.setAttribute('class', 'divData')
+                    receberDiv15Data.innerHTML = ele15[0][1]
+
                     const recerberDiv15 = document.createElement('div')
                     recerberDiv15.setAttribute('class', 'divBolaEscolhida')
-                    ele15.forEach( ele151 => 
+                    ele15[0][0].forEach( ele151 => 
                     {
                         const bolaVerificada15 = document.createElement('div')
                         bolaVerificada15.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada15.innerHTML = `${ele151}`
+                        if (ele15[0][2].includes(ele151)) { 
+                            bolaVerificada15.classList.add('bolaEscolhida2Amarela')
+                        }
                         recerberDiv15.appendChild(bolaVerificada15)
                     })
-                    receber15pontos.appendChild(recerberDiv15)
+                    receberDiv15Completa.appendChild(receberDiv15Data)
+                    receberDiv15Completa.appendChild(recerberDiv15)
+                    receber15pontos.appendChild(receberDiv15Completa)
                 })
             //-----------//
             //-----------//
             if (passo0314.length > 0) {
                 textoPontosinputs14.innerHTML = `${passo0314.length} jogos acertados`
                 passo0314.forEach(ele14 => 
-                    {
+                {
+                    const receberDiv14Completa = document.createElement('div')
+                    receberDiv14Completa.setAttribute('class', 'divCompleta')
+
+                    const receberDiv14Data = document.createElement('div')
+                    receberDiv14Data.setAttribute('class', 'divData')
+                    receberDiv14Data.innerHTML = ele14[0][1]
+
                     const recerberDiv14 = document.createElement('div')
                     recerberDiv14.setAttribute('class', 'divBolaEscolhida')
-                    ele14.forEach( ele141 => 
+                    ele14[0][0].forEach( ele141 => 
                     {
                         const bolaVerificada14 = document.createElement('div')
                         bolaVerificada14.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada14.innerHTML = `${ele141}`
+                        if (ele14[0][2].includes(ele141)) { 
+                            bolaVerificada14.classList.add('bolaEscolhida2Amarela')
+                        }
                         recerberDiv14.appendChild(bolaVerificada14)
                     })
-                    receber14pontos.appendChild(recerberDiv14)
+                    receberDiv14Completa.appendChild(receberDiv14Data)
+                    receberDiv14Completa.appendChild(recerberDiv14)
+                    receber14pontos.appendChild(receberDiv14Completa)
 
 
                     })
@@ -326,6 +350,13 @@ quadro.addEventListener('click', e => {
             
             passo0313.forEach(ele13 => 
                 {
+                    const receberDiv13Completa = document.createElement('div')
+                    receberDiv13Completa.setAttribute('class', 'divCompleta')
+
+                    const receberDiv13Data = document.createElement('div')
+                    receberDiv13Data.setAttribute('class', 'divData')
+                    receberDiv13Data.innerHTML = ele13[0][1]
+
                     const recerberDiv13 = document.createElement('div')
                     recerberDiv13.setAttribute('class', 'divBolaEscolhida')
                     ele13[0][0].forEach( ele131 => 
@@ -333,16 +364,17 @@ quadro.addEventListener('click', e => {
                         const bolaVerificada13 = document.createElement('div')
                         bolaVerificada13.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada13.innerHTML = `${ele131}`
-/////////////////////// if (ele131.includes())
+                        if (ele13[0][2].includes(ele131)) { 
+                            bolaVerificada13.classList.add('bolaEscolhida2Amarela')
+                        }
                         recerberDiv13.appendChild(bolaVerificada13)
                     })
-                    receber13pontos.appendChild(recerberDiv13)
+                    receberDiv13Completa.appendChild(receberDiv13Data)
+                    receberDiv13Completa.appendChild(recerberDiv13)
+                    receber13pontos.appendChild(receberDiv13Completa)
             })
             jogosAcertadorQuadro13.style.display = 'flex'
         }
-
-
-
             //-----------//
             //-----------//
             if (passo0312.length > 0) {
@@ -350,16 +382,29 @@ quadro.addEventListener('click', e => {
             
             passo0312.forEach(ele12 => 
                 {
+                    const receberDiv12Completa = document.createElement('div')
+                    receberDiv12Completa.setAttribute('class', 'divCompleta')
+
+                    const receberDiv12Data = document.createElement('div')
+                    receberDiv12Data.setAttribute('class', 'divData')
+                    receberDiv12Data.innerHTML = ele12[0][1]
+
+
                     const recerberDiv12 = document.createElement('div')
                     recerberDiv12.setAttribute('class', 'divBolaEscolhida')
-                    ele12.forEach( ele121 => 
+                    ele12[0][0].forEach( ele121 => 
                     {
                         const bolaVerificada12 = document.createElement('div')
                         bolaVerificada12.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada12.innerHTML = `${ele121}`
+                        if (ele12[0][2].includes(ele121)) { 
+                            bolaVerificada12.classList.add('bolaEscolhida2Amarela')
+                        }
                         recerberDiv12.appendChild(bolaVerificada12)
                     })
-                    receber12pontos.appendChild(recerberDiv12)
+                    receberDiv12Completa.appendChild(receberDiv12Data)
+                    receberDiv12Completa.appendChild(recerberDiv12)
+                    receber12pontos.appendChild(receberDiv12Completa)
 
             })
             jogosAcertadorQuadro12.style.display = 'flex'
@@ -371,16 +416,31 @@ quadro.addEventListener('click', e => {
             
             passo0311.forEach(ele11 => 
                 {   
+                    const receberDiv11Completa = document.createElement('div')
+                    receberDiv11Completa.setAttribute('class', 'divCompleta')
+
+                    const receberDiv11Data = document.createElement('div')
+                    receberDiv11Data.setAttribute('class', 'divData')
+                    receberDiv11Data.innerHTML = ele11[0][1]
+
+
+
+
                     const recerberDiv11 = document.createElement('div')
                     recerberDiv11.setAttribute('class', 'divBolaEscolhida') 
-                    ele11.forEach( ele111 => 
+                    ele11[0][0].forEach( ele111 => 
                     {
                         const bolaVerificada11 = document.createElement('div')
                         bolaVerificada11.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada11.innerHTML = `${ele111}`
+                        if (ele11[0][2].includes(ele111)) { 
+                            bolaVerificada11.classList.add('bolaEscolhida2Amarela')
+                        }
                         recerberDiv11.appendChild(bolaVerificada11)
                     })
-                    receber11pontos.appendChild(recerberDiv11)
+                    receberDiv11Completa.appendChild(receberDiv11Data)
+                    receberDiv11Completa.appendChild(recerberDiv11)
+                    receber11pontos.appendChild(receberDiv11Completa)
 
 
             })
