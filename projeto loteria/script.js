@@ -54,7 +54,6 @@ const qtGanhadores11 = document.querySelector('.qtGanhadores11')
 let arr15 = []
 let arr15value = []
 
-
 //---------------------------------------------------------//
 //---------------------------------------------------------//
 //---------------------------------------------------------//
@@ -67,8 +66,18 @@ async function buscarResultado() {
     let response = await fetch(URl)
     let data = await response.json()
     let resultadosTodos = await data.map(dezen => dezen.dezenas)
+    
+    
+    const arrNovo = new Array()
+    let resultadosDezData = await data.map( tudo => {
+        arrNovo.push([tudo.dezenas, tudo.data])
+
+    })
+    //console.log(arrNovo)
+
+
     let arrDeTeste = arr15value
-    console.log(data)
+    //console.log(data)
 
 
     const arrDeTeste01 = new Array
@@ -76,12 +85,12 @@ async function buscarResultado() {
 
     if (arrDeTeste.length == 15) {
 
-    let resultadosForeach = await resultadosTodos.forEach( elekent => {
+    let resultadosForeach = await arrNovo.forEach( elekent => {
         
         const arrDeTesteFinal = new Array()
         const arrCompleto2 = new Array()
 
-        elekent.forEach( ele => {
+        elekent[0].forEach( ele => {
 
             //const arrDeTesteFinal = new Array()
 
@@ -142,22 +151,30 @@ async function buscarResultado() {
 
         if (ele.includes(arrDeTeste[14])) {
             arrDeTesteFinal.push(arrDeTeste[14])
-        }    
+        }   
+         
     })
+
     if (arrDeTesteFinal.length > 10) {
         arrCompleto2.push(elekent)
     }
 
     arrDeTeste01.push(arrDeTesteFinal)
+    
     arrCompleto.push(arrCompleto2)
 
 })}
-    let passo02 = await arrDeTeste01.filter( eli => eli.length > 10 )
+    
+    const arrComSomenteOsNumeros = await arrDeTeste01.filter( ele => ele.length > 10)
+
+
+
+    const passo02 = await arrCompleto.filter( eli => eli != 0)
+    console.log(arrComSomenteOsNumeros)
     return passo02
 
     
 }
-
 
 
 //---------------------------------------------------------//
@@ -239,8 +256,8 @@ quadro.addEventListener('click', e => {
                 let passo0312 = await passo021.filter( eli => eli.length == 12 )
                 let passo0313 = await passo021.filter( eli => eli.length == 13 )
                 let passo0314 = await passo021.filter( eli => eli.length == 14 )
-                let passo0315 = await passo021.filter( eli => eli.length == 15 )
-
+                let passo0315 = await passo021.filter( eli => eli[0][0].length == 15 )
+                //console.log(passo0315)
             //-----------//
                 if (passo0315.length > 0) {
                     textoPontosinputs15.innerHTML = `${passo0315.length} jogos acertados`
@@ -343,14 +360,9 @@ quadro.addEventListener('click', e => {
             })
             jogosAcertadorQuadro11.style.display = 'flex'
         }
-            //-----------//
-
-                
-
             }
             
             
-            //receber.innerHTML = (`<p>${arrSrt.toString()}</p>`)
             bus15Resul()
         }
 
@@ -393,7 +405,7 @@ async function buscarResultadoLatest() {
         const premio15Num = Number(premio15.replaceAll(".", ""))
         const premioTotal = vencedores15 * premio15Num
         inputPremio.innerHTML = premioTotal;
-        input15pts.innerHTML = premioTotal;
+        input15pts.innerHTML = `${svgMoney} ${premio15Puro}`;
         qtGanhadores15.innerHTML = `${svg} ${vencedores15}`
     }
     else {

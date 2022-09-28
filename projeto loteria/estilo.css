@@ -166,7 +166,7 @@ justify-content: center;
 .pts {
     display: grid;
     width: 290px;
-    grid-template-columns: 35% 26% 28%;
+    grid-template-columns: 26% 28% 36%;
     border-bottom: 2px solid #737EBF;
     border-radius: 5px;
     justify-content: space-between;
