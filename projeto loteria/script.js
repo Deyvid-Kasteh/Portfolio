@@ -177,7 +177,7 @@ async function buscarResultado() {
 
     const passo02 = arrComNumerosEDatas
     
-    console.log(passo02)
+    ///console.log(passo02)
     return passo02
 
 }
@@ -271,15 +271,15 @@ quadro.addEventListener('click', e => {
 
 
 
-                let passo0311 = await passo021[1].filter( eli => eli.length == 11 )
-                let passo0312 = await passo021[1].filter( eli => eli.length == 12 )
-                let passo0313 = await passo021.filter( eli => eli.length == 13 )
-                let passo0314 = await passo021[1].filter( eli => eli.length == 14 )
-                let passo0315 = await passo021[1].filter( eli => eli.length == 14)
+                let passo0311 = await passo021.filter( eli => eli[0][2].length == 11 )
+                let passo0312 = await passo021.filter( eli => eli[0][2].length == 12 )
+                let passo0313 = await passo021.filter( eli => eli[0][2].length == 13 )
+                let passo0314 = await passo021.filter( eli => eli[0][2].length == 14 )
+                let passo0315 = await passo021.filter( eli => eli[0][2].length == 15 )
                     
                     
                 //    eli[0][0].length == 15 )
-               // console.log(passo0313)
+                console.log(passo0313)
             //-----------//
                 if (passo0315.length > 0) {
                     textoPontosinputs15.innerHTML = `${passo0315.length} jogos acertados`
@@ -328,17 +328,21 @@ quadro.addEventListener('click', e => {
                 {
                     const recerberDiv13 = document.createElement('div')
                     recerberDiv13.setAttribute('class', 'divBolaEscolhida')
-                    ele13.forEach( ele131 => 
+                    ele13[0][0].forEach( ele131 => 
                     {
                         const bolaVerificada13 = document.createElement('div')
                         bolaVerificada13.setAttribute("class", "bolaEscolhida2");
                         bolaVerificada13.innerHTML = `${ele131}`
+/////////////////////// if (ele131.includes())
                         recerberDiv13.appendChild(bolaVerificada13)
                     })
                     receber13pontos.appendChild(recerberDiv13)
             })
             jogosAcertadorQuadro13.style.display = 'flex'
         }
+
+
+
             //-----------//
             //-----------//
             if (passo0312.length > 0) {
