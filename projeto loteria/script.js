@@ -167,14 +167,22 @@ async function buscarResultado() {
     
     const arrComSomenteOsNumeros = await arrDeTeste01.filter( ele => ele.length > 10)
 
+    const arrComNumerosEDatas = await arrCompleto.filter( eli => eli != 0)
 
+    let ind = 0;
+    arrComNumerosEDatas.forEach( agi => {
+        agi[0].push(arrComSomenteOsNumeros[ind]);
+        ind ++
+    })
 
-    const passo02 = await arrCompleto.filter( eli => eli != 0)
-    console.log(arrComSomenteOsNumeros)
+    const passo02 = arrComNumerosEDatas
+    
+    console.log(passo02)
     return passo02
 
-    
 }
+
+
 
 
 //---------------------------------------------------------//
@@ -185,6 +193,7 @@ async function buscarResultado() {
 //---------------------------------------------------------//
 //---------------------------------------------------------//
 //-------------------------------------------------------//
+
 
 quadro.addEventListener('click', e => {
         // console.log(e.target.id)
@@ -252,12 +261,25 @@ quadro.addEventListener('click', e => {
                 receber15pontos.innerHTML = ' ';
 
                 let passo021 = await buscarResultado()
-                let passo0311 = await passo021.filter( eli => eli.length == 11 )
-                let passo0312 = await passo021.filter( eli => eli.length == 12 )
+                //const tentativa01 = 
+                
+                //await passo021.forEach(agi => console.log(agi))
+
+                //console.log(passo021)
+                //console.log(passo021[1])
+
+
+
+
+                let passo0311 = await passo021[1].filter( eli => eli.length == 11 )
+                let passo0312 = await passo021[1].filter( eli => eli.length == 12 )
                 let passo0313 = await passo021.filter( eli => eli.length == 13 )
-                let passo0314 = await passo021.filter( eli => eli.length == 14 )
-                let passo0315 = await passo021.filter( eli => eli[0][0].length == 15 )
-                //console.log(passo0315)
+                let passo0314 = await passo021[1].filter( eli => eli.length == 14 )
+                let passo0315 = await passo021[1].filter( eli => eli.length == 14)
+                    
+                    
+                //    eli[0][0].length == 15 )
+               // console.log(passo0313)
             //-----------//
                 if (passo0315.length > 0) {
                     textoPontosinputs15.innerHTML = `${passo0315.length} jogos acertados`
